@@ -1,0 +1,73 @@
+# Liste des mots vides (stop words) à exclure de l'indexation
+# Ces mots sont très fréquents mais n'apportent pas d'information utile pour la recherche
+# Les élèves doivent compléter cette liste avec tous les mots inutiles qu'ils trouvent
+
+mots_vides:
+  # Articles définis
+  - le
+  - la
+  - les
+  - l'
+
+  # Articles indéfinis
+  - un
+  - une
+  - des
+
+  # Pronoms
+  - il
+  - elle
+  - ils
+  - elles
+  - ce
+  - cet
+  - cette
+  - ces
+
+  # Prépositions
+  - de
+  - du
+  - des
+  - à
+  - au
+  - aux
+  - en
+  - dans
+  - sur
+  - sous
+  - avec
+  - sans
+  - pour
+  - par
+  - chez
+
+  # Conjonctions
+  - et
+  - ou
+  - mais
+  - donc
+  - car
+  - que
+  - qui
+  - quoi
+  - dont
+  - où
+
+  # Adverbes
+  - très
+  - plus
+  - moins
+  - bien
+  - mal
+  - ici
+  - là
+
+  # Autres mots fréquents
+  - est
+  - sont
+  - être
+  - avoir
+  - faire
+
+  # À compléter par les élèves :
+  # - [ajouter d'autres mots vides trouvés dans les descriptions de produits]

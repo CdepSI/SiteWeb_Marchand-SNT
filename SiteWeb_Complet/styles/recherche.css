@@ -1,0 +1,54 @@
+/* === BARRE DE RECHERCHE === */
+.barre-recherche {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px auto;
+    max-width: 600px;
+    flex-wrap: wrap;
+}
+
+.barre-recherche input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.barre-recherche input:focus {
+    outline: none;
+    border-color: #1abc9c;
+}
+
+.barre-recherche button {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.barre-recherche button:hover {
+    background-color: #16a085;
+}
+
+.barre-recherche button:last-child {
+    background-color: #3498db;
+}
+
+.barre-recherche button:last-child:hover {
+    background-color: #2980b9;
+}
+
+/* Mise en évidence des résultats de recherche */
+mark {
+    background-color: #fff59d;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}

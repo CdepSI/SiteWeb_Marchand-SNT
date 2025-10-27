@@ -1,0 +1,21 @@
+clients:
+- age: 23
+  email: claire.dupont80@gmail.com
+  nom: DUPONT
+  prenom: Claire
+  ville: Cottenchy
+- age: 55
+  email: cedric.depoilly@ac-amiens.fr
+  nom: DEPOILLY
+  prenom: Cédric
+  ville: Cottenchy
+- age: 6
+  email: cedric.depoilly@ac-amiens.fr
+  nom: DEPOILLY
+  prenom: Cédric
+  ville: Cottenchy
+- age: 6
+  email: cedric.depoilly@outlook.fr
+  nom: blancs
+  prenom: Les
+  ville: COTTENCHY
