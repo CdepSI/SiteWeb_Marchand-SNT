@@ -1,0 +1,410 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\setsansfont{Noto Sans}[Scale=MatchLowercase]
+
+\geometry{margin=2cm}
+
+\lstset{
+    language=HTML,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true
+}
+
+\lstdefinestyle{CSS}{
+    language=,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true
+}
+
+\title{Activité 2 : Langage CSS - Mise en forme d'un site web marchand}
+\author{Documentation pour les élèves}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction au langage CSS}
+
+\subsection{Qu'est-ce que le CSS ?}
+
+Le CSS (Cascading Style Sheets) est un langage de feuilles de style utilisé pour décrire la présentation d'un document écrit en HTML. Il permet de séparer le contenu (HTML) de la présentation (CSS), ce qui facilite la maintenance et l'évolution des sites web.
+
+\subsection{Rôle du CSS dans une page web}
+
+Le CSS joue plusieurs rôles essentiels dans une page web :
+
+\begin{itemize}
+\item \textbf{Mise en forme visuelle} : Définit les couleurs, polices, tailles et espacements
+\item \textbf{Disposition} : Organise la position des éléments sur la page (Flexbox, Grid, positionnement)
+\item \textbf{Responsive design} : Adapte l'affichage selon la taille d'écran
+\item \textbf{Animations et transitions} : Ajoute des effets visuels dynamiques
+\item \textbf{Accessibilité} : Améliore la lisibilité et l'expérience utilisateur
+\end{itemize}
+
+\subsection{Comment intégrer le CSS dans une page HTML}
+
+Il existe trois méthodes principales pour intégrer le CSS :
+
+\subsubsection{Méthode externe (recommandée)}
+
+Utilise un fichier \texttt{.css} séparé lié via la balise \texttt{<link>} dans l'en-tête :
+
+\begin{lstlisting}
+<head>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+\end{lstlisting}
+
+\subsubsection{Méthode interne}
+
+Le CSS est écrit directement dans une balise \texttt{<style>} dans l'en-tête :
+
+\begin{lstlisting}
+<head>
+    <style>
+        body { background-color: #f4f4f4; }
+        h1 { color: #2c3e50; }
+    </style>
+</head>
+\end{lstlisting}
+
+\subsubsection{Méthode en ligne}
+
+Le CSS est appliqué directement sur un élément HTML via l'attribut \texttt{style} :
+
+\begin{lstlisting}
+<h1 style="color: #2c3e50; font-size: 2em;">Titre</h1>
+\end{lstlisting}
+
+\section{Les couleurs en CSS}
+
+\subsection{Les différents formats de couleurs}
+
+Le CSS supporte plusieurs formats pour définir les couleurs :
+
+\subsubsection{Couleurs nommées}
+
+Mots-clés prédéfinis comme \texttt{red}, \texttt{blue}, \texttt{green}, etc.
+
+\subsubsection{Couleurs hexadécimales}
+
+Format \texttt{\#RRGGBB} où RR, GG, BB sont des valeurs hexadécimales de 00 à FF :
+
+\begin{itemize}
+\item \texttt{\#FF0000} : Rouge pur
+\item \texttt{\#00FF00} : Vert pur
+\item \texttt{\#0000FF} : Bleu pur
+\item \texttt{\#FFFFFF} : Blanc
+\item \texttt{\#000000} : Noir
+\item \texttt{\#2c3e50} : Bleu foncé (utilisé dans notre site)
+\end{itemize}
+
+\subsubsection{Couleurs RGB/RGBA}
+
+Format \texttt{rgb(rouge, vert, bleu)} avec valeurs de 0 à 255 :
+
+\begin{lstlisting}
+color: rgb(44, 62, 80);    /* Équivalent à #2c3e50 */
+background-color: rgba(26, 188, 156, 0.8); /* Avec transparence */
+\end{lstlisting}
+
+\subsection{Les couleurs dans notre projet}
+
+Dans notre site marchand, nous utilisons principalement des couleurs hexadécimales :
+
+\begin{itemize}
+\item \texttt{\#2c3e50} : Bleu foncé pour les en-têtes et pieds de page
+\item \texttt{\#1abc9c} : Vert turquoise pour les boutons principaux
+\item \texttt{\#3498db} : Bleu clair pour les boutons secondaires
+\item \texttt{\#e74c3c} : Rouge pour les boutons danger
+\item \texttt{\#ecf0f1} : Gris très clair pour les fonds secondaires
+\item \texttt{\#f4f4f4} : Gris clair pour le fond de page général
+\end{itemize}
+
+\section{Les effets au survol (hover)}
+
+\subsection{Principe du hover}
+
+Le pseudo-sélecteur \texttt{:hover} permet de définir des styles qui s'appliquent lorsqu'un élément est survolé par le curseur de la souris. C'est essentiel pour l'interactivité utilisateur.
+
+\subsection{Exemples dans notre projet}
+
+\subsubsection{Boutons principaux}
+
+\begin{lstlisting}[style=CSS]
+.button {
+    background-color: #1abc9c;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #16a085; /* Version plus foncée */
+}
+\end{lstlisting}
+
+\subsubsection{Boutons secondaires}
+
+\begin{lstlisting}[style=CSS]
+.button-secondary {
+    background-color: #3498db;
+    transition: background-color 0.3s;
+}
+
+.button-secondary:hover {
+    background-color: #2980b9; /* Version plus foncée */
+}
+\end{lstlisting}
+
+\subsubsection{Liens de navigation}
+
+\begin{lstlisting}[style=CSS]
+nav a {
+    background-color: #34495e;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #1abc9c; /* Changement complet de couleur */
+}
+\end{lstlisting}
+
+\subsection{L'importance des transitions}
+
+La propriété \texttt{transition} permet d'animer doucement les changements de couleur :
+
+\begin{lstlisting}
+transition: background-color 0.3s; /* Animation de 0.3 seconde */
+\end{lstlisting}
+
+Cela rend l'interface plus fluide et professionnelle.
+
+\section{Les bordures et les arrondis}
+
+\subsection{Les bordures (border)}
+
+La propriété \texttt{border} permet de définir une bordure autour d'un élément :
+
+\begin{lstlisting}[style=CSS]
+border: 2px solid #ecf0f1; /* Épaisseur | Style | Couleur */
+\end{lstlisting}
+
+\subsubsection{Les styles de bordure}
+
+\begin{itemize}
+\item \texttt{solid} : Ligne continue (le plus utilisé)
+\item \texttt{dashed} : Ligne en pointillés
+\item \texttt{dotted} : Ligne en points
+\item \texttt{double} : Double ligne
+\item \texttt{none} : Pas de bordure
+\end{itemize}
+
+\subsubsection{Bordures partielles}
+
+Il est possible de définir des bordures seulement sur certains côtés :
+
+\begin{lstlisting}[style=CSS]
+border-top: 3px solid #1abc9c;    /* Bordure supérieure seulement */
+border-bottom: 1px solid #ddd;   /* Bordure inférieure seulement */
+border-left: 2px solid #ecf0f1;   /* Bordure gauche seulement */
+border-right: 2px solid #ecf0f1;  /* Bordure droite seulement */
+\end{lstlisting}
+
+\subsection{Les arrondis (border-radius)}
+
+La propriété \texttt{border-radius} permet d'arrondir les coins d'un élément :
+
+\begin{lstlisting}[style=CSS]
+border-radius: 5px;   /* Tous les coins arrondis de 5px */
+border-radius: 8px;   /* Arrondi plus prononcé */
+border-radius: 50%;   /* Cercle parfait (pour un élément carré) */
+\end{lstlisting}
+
+\subsubsection{Arrondis partiels}
+
+Il est possible d'arrondir seulement certains coins :
+
+\begin{lstlisting}[style=CSS]
+border-radius: 8px 8px 0 0; /* Arrondi seulement en haut */
+border-radius: 0 0 8px 8px; /* Arrondi seulement en bas */
+\end{lstlisting}
+
+\subsection{Exemples dans notre projet}
+
+\subsubsection{Cartes de produits}
+
+\begin{lstlisting}[style=CSS]
+.produit-carte {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+\end{lstlisting}
+
+\subsubsection{Boutons}
+
+\begin{lstlisting}[style=CSS]
+.button {
+    border-radius: 5px;
+}
+\end{lstlisting}
+
+\subsubsection{Sections}
+
+\begin{lstlisting}[style=CSS]
+.hero, .presentation, .section-plan {
+    border-radius: 8px;
+}
+\end{lstlisting}
+
+\subsubsection{Barre de recherche}
+
+\begin{lstlisting}[style=CSS]
+.barre-recherche input, .barre-recherche button {
+    border-radius: 5px;
+}
+\end{lstlisting}
+
+\section{Les espacements : padding et margin}
+
+\subsection{Différence entre padding et margin}
+
+\begin{itemize}
+\item \textbf{Padding} : Espace intérieur entre le contenu et la bordure
+\item \textbf{Margin} : Espace extérieur autour de l'élément (entre la bordure et les autres éléments)
+\end{itemize}
+
+\subsection{Unité px (pixels)}
+
+L'unité \texttt{px} représente un pixel physique sur l'écran. C'est l'unité la plus courante pour les espacements fixes :
+
+\begin{itemize}
+\item \texttt{5px} : Très petit espacement
+\item \texttt{10px} : Espacement modéré
+\item \texttt{15px} : Espacement confortable
+\item \texttt{20px} : Espacement généreux
+\item \texttt{30px} : Grand espacement
+\end{itemize}
+
+\subsection{Syntaxe des espacements}
+
+\subsubsection{Valeur unique}
+
+\begin{lstlisting}[style=CSS]
+padding: 20px;  /* 20px sur tous les côtés */
+margin: 10px;   /* 10px sur tous les côtés */
+\end{lstlisting}
+
+\subsubsection{Deux valeurs}
+
+\begin{lstlisting}[style=CSS]
+padding: 10px 20px;   /* 10px haut/bas, 20px gauche/droite */
+margin: 15px 30px;    /* 15px haut/bas, 30px gauche/droite */
+\end{lstlisting}
+
+\subsubsection{Trois valeurs}
+
+\begin{lstlisting}[style=CSS]
+padding: 10px 20px 15px;  /* 10px haut, 20px gauche/droite, 15px bas */
+\end{lstlisting}
+
+\subsubsection{Quatre valeurs}
+
+\begin{lstlisting}[style=CSS]
+padding: 10px 20px 15px 5px;  /* haut, droite, bas, gauche */
+margin: 20px 15px 10px 25px;  /* haut, droite, bas, gauche */
+\end{lstlisting}
+
+\subsubsection{Espacements individuels}
+
+\begin{lstlisting}[style=CSS]
+padding-top: 20px;     /* Espacement intérieur supérieur */
+padding-right: 15px;   /* Espacement intérieur droit */
+padding-bottom: 10px;  /* Espacement intérieur inférieur */
+padding-left: 25px;    /* Espacement intérieur gauche */
+
+margin-top: 30px;      /* Marge extérieure supérieure */
+margin-right: 0;       /* Pas de marge droite */
+margin-bottom: 20px;   /* Marge extérieure inférieure */
+margin-left: auto;     /* Marge gauche automatique (centrage) */
+\end{lstlisting}
+
+\subsection{Exemples dans notre projet}
+
+\subsubsection{En-tête}
+
+\begin{lstlisting}[style=CSS]
+header {
+    padding: 20px; /* Espacement intérieur de 20px sur tous les côtés */
+}
+\end{lstlisting}
+
+\subsubsection{Contenu principal}
+
+\begin{lstlisting}[style=CSS]
+main {
+    max-width: 1200px;
+    margin: 30px auto; /* Centrage horizontal avec marge verticale */
+    padding: 20px;      /* Espacement intérieur */
+}
+\end{lstlisting}
+
+\subsubsection{Boutons}
+
+\begin{lstlisting}[style=CSS]
+.button {
+    padding: 12px 30px; /* 12px haut/bas, 30px gauche/droite */
+}
+\end{lstlisting}
+
+\subsubsection{Barre de recherche}
+
+\begin{lstlisting}[style=CSS]
+.barre-recherche {
+    margin: 15px auto; /* Centrage horizontal */
+    padding: 0;        /* Pas d'espacement intérieur */
+}
+\end{lstlisting}
+
+\subsubsection{Cartes de produits}
+
+\begin{lstlisting}[style=CSS]
+.produit-carte {
+    padding: 15px; /* Espacement intérieur de 15px */
+    margin-bottom: 20px; /* Marge inférieure entre cartes */
+}
+\end{lstlisting}
+
+\section{Conseils pour modifier les styles CSS}
+
+\begin{itemize}
+\item Testez toujours vos modifications dans un navigateur
+\item Utilisez les outils de développement (F12) pour inspecter les éléments
+\item Respectez la hiérarchie des sélecteurs CSS
+\item Utilisez des noms de classes descriptifs
+\item Commentez votre code pour le rendre maintenable
+\item Pensez au responsive design dès le départ
+\end{itemize}
+
+Bonne chance dans cette activité d'initiation au CSS !
+
+\end{document}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[TITRE DE LA PAGE]</title>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>[TITRE PRINCIPAL]</h1>
+            <img src="../images/logo.png" alt="Logo Boutique SNT" style="height: 60px; width: auto;">
+        </div>
+
+        <div class="barre-recherche">
+            <input type="text"
+                   id="input-recherche"
+                   placeholder="🔍 Rechercher un produit...">
+            <button onclick="rechercher()">Rechercher</button>
+            <button onclick="afficherIndex()">Voir l'index</button>
+        </div>
+
+        <!-- AJOUTER LE MENU ICI -->
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>[TITRE DE LA SECTION HERO]</h2>
+            <p>[TEXTE DE PRESENTATION]</p>
+            <img src="images/bienvenue.jpg" alt="Image de bienvenue" class="hero-image">
+        </section>
+
+        <section class="presentation">
+            <h3>[TITRE DE LA SECTION PRESENTATION]</h3>
+            <p>[PARAGRAPHE 1]</p>
+            <p>[PARAGRAPHE 2]</p>
+
+            <div class="actions">
+                <a href="pages/produits.html" class="button">[TEXTE BOUTON 1]</a>
+                <a href="pages/inscription.html" class="button button-secondary">[TEXTE BOUTON 2]</a>
+            </div>
+        </section>
+
+        <!-- Section des produits récemment consultés -->
+        <div class="section-historique">
+            <h2>[TITRE SECTION HISTORIQUE]</h2>
+            <div class="info-cookies">
+                <p><em>[TEXTE INFO COOKIES]</em></p>
+                <button onclick="afficherCookies()" class="button-small">
+                    [TEXTE BOUTON COOKIES]
+                </button>
+                <button onclick="supprimerHistorique()" class="button-small button-danger">
+                    [TEXTE BOUTON EFFACER]
+                </button>
+            </div>
+            <div id="historique-produits" class="produits-grid">
+                <!-- Les produits récents seront affichés ici -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>[TEXTE DU FOOTER]</p>
+    </footer>
+</body>
+</html>

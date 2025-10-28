@@ -1,0 +1,73 @@
+/* === PAGE ACCUEIL ===
+   Section d'accueil principale avec message de bienvenue
+*/
+.hero { /* Section principale de la page d'accueil */
+    text-align: center; /* Centrage du texte */
+    padding: 30px; /* Espacement intérieur */
+    background-color: #ecf0f1; /* Fond gris clair */
+    border-radius: 8px; /* Coins arrondis */
+    margin-bottom: 30px; /* Marge inférieure */
+}
+
+.hero-image { /* Image dans la section hero */
+    max-width: 100%; /* Largeur maximale */
+    height: auto; /* Hauteur proportionnelle */
+    margin-top: 20px; /* Marge supérieure */
+    border-radius: 8px; /* Coins arrondis */
+    max-height: 400px; /* Hauteur maximale */
+    object-fit: cover; /* Recadrage intelligent */
+}
+
+.presentation { /* Section de présentation */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.actions { /* Boutons d'action principaux */
+    display: flex; /* Utilise Flexbox */
+    gap: 15px; /* Espace entre les boutons */
+    justify-content: center; /* Centrage horizontal */
+    margin-top: 20px; /* Marge supérieure */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+}
+
+/* === BOUTONS ===
+   Styles pour tous les boutons du site
+   Différentes variantes pour différentes actions
+*/
+.button { /* Bouton principal */
+    display: inline-block; /* Affichage en ligne */
+    padding: 12px 30px; /* Espacement intérieur */
+    background-color: #1abc9c; /* Fond vert */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur pointer */
+    font-size: 1em; /* Taille de police normale */
+    transition: background-color 0.3s; /* Animation douce */
+}
+
+.button:hover { /* Au survol du bouton principal */
+    background-color: #16a085; /* Vert plus foncé */
+}
+
+.button-secondary { /* Bouton secondaire (bleu) */
+    background-color: #3498db; /* Fond bleu */
+}
+
+.button-secondary:hover { /* Au survol du bouton secondaire */
+    background-color: #2980b9; /* Bleu plus foncé */
+}
+
+.button-danger { /* Bouton danger (rouge) */
+    background-color: #e74c3c; /* Fond rouge */
+}
+
+.button-danger:hover { /* Au survol du bouton danger */
+    background-color: #c0392b; /* Rouge plus foncé */
+}
+
+.button-small { /* Bouton petit */
+    padding: 5px 10px; /* Espacement réduit */
+    font-size: 0.9em; /* Police plus petite */
+}

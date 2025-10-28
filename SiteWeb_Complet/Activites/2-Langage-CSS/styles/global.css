@@ -1,0 +1,169 @@
+/* === STYLE GÉNÉRAL ===
+   Réinitialisation des marges et padding par défaut de tous les éléments
+   Définition de la police et des couleurs de base pour toute la page
+*/
+* { /* Sélecteur universel - s'applique à TOUS les éléments */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements intérieurs par défaut */
+    box-sizing: border-box; /* Le padding et border sont inclus dans la largeur/hauteur */
+}
+
+body { /* Élément body - conteneur principal de la page */
+    font-family: Arial, sans-serif; /* Police de caractères principale */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: #333; /* Couleur du texte - gris foncé */
+    background-color: #f4f4f4; /* Couleur de fond - gris très clair */
+}
+
+/* === HEADER ===
+   Styles pour l'en-tête de toutes les pages
+   Fond sombre avec texte blanc centré
+*/
+header { /* Élément header - en-tête de la page */
+    background-color: #2c3e50; /* Fond bleu foncé */
+    color: white; /* Texte blanc */
+    padding: 20px; /* Espacement intérieur */
+    text-align: center; /* Centrage du contenu */
+}
+
+header h1 { /* Titre principal dans l'en-tête */
+    margin-bottom: 15px; /* Marge inférieure */
+    font-size: 2em; /* Taille de police double */
+}
+
+/* Menu hamburger - Bouton pour ouvrir/fermer le menu sur mobile */
+.menu-toggle { /* Classe pour le bouton hamburger */
+    display: none; /* Masqué par défaut (visible seulement sur mobile) */
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordure */
+    color: white; /* Icône blanche */
+    font-size: 24px; /* Taille de l'icône */
+    cursor: pointer; /* Curseur pointer au survol */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Animation douce */
+}
+
+.menu-toggle:hover { /* État au survol du bouton hamburger */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond blanc semi-transparent */
+}
+
+/* Navigation principale - Menu de navigation horizontal */
+nav { /* Élément nav - conteneur du menu */
+    display: flex; /* Disposition en ligne flexible */
+    justify-content: center; /* Centrage horizontal */
+    gap: 20px; /* Espace entre les éléments */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+}
+
+nav a { /* Liens dans la navigation */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Supprime le soulignement */
+    padding: 10px 20px; /* Espacement intérieur */
+    background-color: #34495e; /* Fond gris-bleu */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Animation de couleur */
+}
+
+nav a:hover { /* État au survol des liens du menu */
+    background-color: #1abc9c; /* Changement de couleur au survol */
+}
+
+/* Menu mobile - Adaptation du menu pour les écrans mobiles */
+@media (max-width: 768px) { /* Media query pour écrans ≤ 768px */
+    .menu-toggle { /* Bouton hamburger visible sur mobile */
+        display: block; /* Affiche le bouton hamburger */
+    }
+
+    nav { /* Menu transformé en menu déroulant */
+        position: fixed; /* Position fixe par rapport à la fenêtre */
+        top: 100%; /* Positionné sous l'en-tête */
+        left: 0; /* Aligné à gauche */
+        right: 0; /* Étendu à droite */
+        background-color: #2c3e50; /* Fond sombre */
+        flex-direction: column; /* Disposition verticale */
+        gap: 0; /* Pas d'espace entre éléments */
+        padding: 0; /* Pas de padding */
+        transform: translateY(-100%); /* Masqué par défaut (au-dessus) */
+        transition: transform 0.3s ease; /* Animation d'ouverture */
+        z-index: 1000; /* Au-dessus des autres éléments */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Ombre portée */
+    }
+
+    nav.open { /* Classe ajoutée quand le menu est ouvert */
+        transform: translateY(0); /* Menu visible (position normale) */
+    }
+
+    nav a { /* Liens du menu mobile */
+        padding: 15px 20px; /* Padding plus important */
+        border-bottom: 1px solid #34495e; /* Séparation entre liens */
+        width: 100%; /* Largeur pleine */
+        text-align: center; /* Centrage du texte */
+    }
+
+    nav a:last-child { /* Dernier lien du menu */
+        border-bottom: none; /* Pas de bordure inférieure */
+    }
+}
+
+/* === MAIN ===
+   Conteneur principal du contenu de chaque page
+   Largeur maximale avec centrage et fond blanc
+*/
+main { /* Élément main - contenu principal */
+    max-width: 1200px; /* Largeur maximale */
+    margin: 30px auto; /* Centrage vertical et horizontal */
+    padding: 20px; /* Espacement intérieur */
+    background-color: white; /* Fond blanc */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère */
+}
+
+/* Titres principaux des pages */
+h2 { /* Titres de niveau 2 */
+    color: #2c3e50; /* Couleur bleu foncé */
+    margin-bottom: 20px; /* Marge inférieure */
+    border-bottom: 3px solid #1abc9c; /* Ligne verte sous le titre */
+    padding-bottom: 10px; /* Espacement sous la ligne */
+}
+
+/* Sous-titres */
+h3 { /* Titres de niveau 3 */
+    color: #34495e; /* Couleur gris-bleu */
+    margin-top: 20px; /* Marge supérieure */
+    margin-bottom: 15px; /* Marge inférieure */
+}
+
+/* === RESPONSIVE ===
+   Adaptation pour les écrans mobiles et tablettes
+   Changement de disposition pour les petits écrans
+*/
+@media (max-width: 768px) { /* Règles pour écrans mobiles */
+    nav { /* Menu en colonne sur mobile */
+        flex-direction: column; /* Disposition verticale */
+    }
+
+    .produits-grid { /* Grille de produits adaptée */
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+
+    .actions { /* Boutons d'action en colonne */
+        flex-direction: column; /* Disposition verticale */
+    }
+
+    .actions-panier { /* Actions du panier en colonne */
+        flex-direction: column; /* Disposition verticale */
+    }
+}
+
+/* === FOOTER ===
+   Pied de page commun à toutes les pages
+   Fond sombre avec texte centré
+*/
+footer { /* Élément footer - pied de page */
+    background-color: #2c3e50; /* Fond bleu foncé */
+    color: white; /* Texte blanc */
+    text-align: center; /* Centrage du texte */
+    padding: 20px; /* Espacement intérieur */
+    margin-top: 40px; /* Marge supérieure */
+}

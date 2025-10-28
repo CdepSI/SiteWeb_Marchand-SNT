@@ -1,0 +1,106 @@
+
+/* === SECTION HISTORIQUE ===
+   Barre latérale affichant les produits récemment consultés
+   Utilise les cookies pour mémoriser l'historique de navigation
+*/
+.section-historique { /* Conteneur de la section historique */
+    margin-top: 50px; /* Marge supérieure */
+    padding-top: 30px; /* Espacement intérieur supérieur */
+    border-top: 3px solid #ecf0f1; /* Ligne de séparation supérieure */
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    left: 20px; /* Position à 20px du bord gauche */
+    top: 50%; /* Centré verticalement */
+    transform: translateY(-50%); /* Ajustement pour centrage parfait */
+    width: 280px; /* Largeur fixe */
+    background: white; /* Fond blanc */
+    border: 2px solid #ecf0f1; /* Bordure grise claire */
+    border-radius: 12px; /* Coins très arrondis */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Ombre légère */
+    z-index: 100; /* Au-dessus des autres éléments */
+    max-height: 70vh; /* Hauteur maximale (70% de la hauteur de la fenêtre) */
+    overflow-y: auto; /* Défilement vertical si nécessaire */
+}
+
+/* Zone d'information sur les cookies */
+.info-cookies { /* Boîte d'information sur les cookies */
+    background-color: #fff3cd; /* Fond jaune pâle */
+    border: 2px solid #ffc107; /* Bordure jaune */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 15px; /* Espacement intérieur */
+    margin: 0 0 15px 0; /* Marge inférieure seulement */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Disposition verticale */
+    gap: 10px; /* Espace entre les éléments enfants */
+}
+
+.info-cookies p { /* Paragraphes dans la zone d'info */
+    margin: 0; /* Supprime les marges par défaut */
+    font-size: 0.9em; /* Taille de police réduite */
+    line-height: 1.4; /* Hauteur de ligne pour lisibilité */
+}
+
+.info-cookies em { /* Texte en italique dans la zone d'info */
+    color: #856404; /* Couleur marron */
+}
+
+/* Style spécial pour les produits dans l'historique */
+.produit-historique { /* Produits affichés dans l'historique */
+    opacity: 0.9; /* Légèrement transparent */
+    border: 2px dashed #ffc107; /* Bordure jaune en pointillés */
+    transform: scale(0.9); /* Légèrement réduit */
+}
+
+.produit-historique:hover { /* Au survol des produits historiques */
+    opacity: 1; /* Opacité complète */
+    transform: scale(0.95); /* Légèrement agrandi */
+}
+
+/* Messages d'information et d'erreur */
+.message-info { /* Boîte de message informatif */
+    text-align: center; /* Centrage du texte */
+    padding: 20px; /* Espacement intérieur */
+    background-color: #e3f2fd; /* Fond bleu très clair */
+    border-radius: 8px; /* Coins arrondis */
+    color: #1976d2; /* Texte bleu */
+    font-size: 0.9em; /* Taille de police réduite */
+    margin: 10px 0; /* Marges verticale */
+}
+
+.message-erreur { /* Boîte de message d'erreur */
+    text-align: center; /* Centrage du texte */
+    padding: 20px; /* Espacement intérieur */
+    background-color: #ffebee; /* Fond rouge très clair */
+    border-radius: 8px; /* Coins arrondis */
+    color: #c62828; /* Texte rouge */
+    font-size: 0.9em; /* Taille de police réduite */
+    margin: 10px 0; /* Marges verticale */
+}
+
+/* Responsive pour la sidebar - Adaptation pour écrans moyens */
+@media (max-width: 1200px) { /* Pour écrans moyens (tablettes) */
+    .section-historique { /* Section historique adaptée */
+        position: static; /* Position normale (pas fixe) */
+        transform: none; /* Supprime la transformation */
+        width: 100%; /* Largeur pleine */
+        margin-top: 30px; /* Marge supérieure */
+        max-height: none; /* Pas de limite de hauteur */
+        order: 10; /* Met la section à la fin de l'ordre */
+    }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) { /* Pour écrans mobiles */
+    .produit-detail { /* Détail produit adapté */
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+
+    .produit-detail-actions { /* Actions du détail en colonne */
+        flex-direction: column; /* Disposition verticale */
+    }
+
+    .section-historique { /* Section historique adaptée */
+        margin-top: 20px; /* Marge supérieure réduite */
+        padding: 15px; /* Padding réduit */
+    }
+}
