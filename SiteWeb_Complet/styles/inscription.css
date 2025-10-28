@@ -1,0 +1,120 @@
+/* === BOUTONS === */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #16a085;
+}
+
+.button-secondary {
+    background-color: #3498db;
+}
+
+.button-secondary:hover {
+    background-color: #2980b9;
+}
+
+.button-danger {
+    background-color: #e74c3c;
+}
+
+.button-danger:hover {
+    background-color: #c0392b;
+}
+
+.button-small {
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+/* === FORMULAIRE === */
+.formulaire-conteneur {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.champ-formulaire {
+    margin-bottom: 20px;
+}
+
+.champ-formulaire label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.champ-formulaire input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.champ-formulaire input:focus {
+    outline: none;
+    border-color: #1abc9c;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message-succes {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-erreur {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* === LISTE CLIENTS === */
+.liste-inscrits {
+    margin-top: 40px;
+}
+
+.tableau-clients {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tableau-clients th,
+.tableau-clients td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tableau-clients th {
+    background-color: #34495e;
+    color: white;
+}
+
+.tableau-clients tr:hover {
+    background-color: #f5f5f5;
+}

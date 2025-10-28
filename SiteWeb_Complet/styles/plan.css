@@ -1,0 +1,31 @@
+
+/* === PLAN DU SITE === */
+.plan-site {
+    padding: 20px;
+}
+
+.section-plan {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+
+.section-plan ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+.section-plan li {
+    margin: 10px 0;
+}
+
+.section-plan a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.section-plan a:hover {
+    text-decoration: underline;
+}
+

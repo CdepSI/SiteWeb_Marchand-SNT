@@ -1,0 +1,144 @@
+/* ==========================================
+   STYLES POUR LA PAGE PRODUITS
+   ==========================================
+
+   Ce fichier contient tous les styles CSS pour la page d'affichage des produits.
+   Il définit l'apparence des cartes produits, des boutons et des indicateurs de stock.
+*/
+
+/* === GRILLE DE PRODUITS ===
+   Définit la disposition en grille responsive des cartes produits
+*/
+.produits-grid {
+    display: grid;                                    /* Utilise CSS Grid pour la disposition */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colonnes adaptatives */
+    gap: 20px;                                        /* Espace entre les cartes */
+    margin-top: 20px;                                 /* Marge supérieure */
+}
+
+/* === CARTES PRODUITS ===
+   Styles pour chaque carte individuelle représentant un produit
+*/
+.produit-carte {
+    border: 1px solid #ddd;                           /* Bordure grise fine */
+    border-radius: 8px;                               /* Coins arrondis */
+    padding: 15px;                                    /* Espacement intérieur */
+    text-align: center;                                /* Centrage du texte */
+    background-color: white;                           /* Fond blanc */
+    transition: transform 0.3s, box-shadow 0.3s;       /* Animation douce */
+}
+
+.produit-carte:hover {
+    transform: translateY(-5px);                       /* Lève la carte au survol */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);           /* Ombre portée */
+}
+
+/* Images des produits */
+.produit-carte img {
+    max-width: 100%;                                  /* Largeur maximale */
+    height: 200px;                                    /* Hauteur fixe */
+    object-fit: cover;                                /* Recadrage intelligent */
+    border-radius: 5px;                               /* Coins légèrement arrondis */
+    margin-bottom: 10px;                              /* Marge inférieure */
+}
+
+/* Titres des produits */
+.produit-carte h3 {
+    color: #2c3e50;                                   /* Couleur sombre */
+    margin: 10px 0;                                   /* Marges verticale */
+}
+
+/* Descriptions des produits */
+.produit-carte .description {
+    color: #7f8c8d;                                   /* Couleur grise */
+    font-size: 0.9em;                                 /* Taille réduite */
+    margin: 10px 0;                                   /* Marges verticale */
+}
+
+/* Prix des produits */
+.produit-carte .prix {
+    color: #27ae60;                                   /* Couleur verte */
+    font-size: 1.3em;                                 /* Taille agrandie */
+    font-weight: bold;                                /* Texte en gras */
+    margin: 10px 0;                                   /* Marges verticale */
+}
+
+/* === BOUTONS ===
+   Styles pour tous les boutons de la page produits
+*/
+
+/* Bouton principal "Ajouter au panier" */
+.produit-carte button {
+    width: 100%;                                      /* Largeur pleine */
+    margin-top: 10px;                                 /* Marge supérieure */
+    padding: 10px 15px;                               /* Espacement intérieur */
+    background-color: #1abc9c;                         /* Couleur principale */
+    color: white;                                     /* Texte blanc */
+    border: none;                                     /* Pas de bordure */
+    border-radius: 5px;                               /* Coins arrondis */
+    cursor: pointer;                                  /* Curseur pointer */
+    font-size: 0.9em;                                 /* Taille de police */
+    font-weight: bold;                                /* Texte en gras */
+    transition: background-color 0.3s, transform 0.2s; /* Transitions fluides */
+}
+
+.produit-carte button:hover:not(:disabled) {
+    background-color: #16a085;                         /* Couleur plus foncée au survol */
+    transform: translateY(-2px);                       /* Lève légèrement le bouton */
+}
+
+.produit-carte button:active:not(:disabled) {
+    transform: translateY(0);                          /* Retour à la position normale */
+}
+
+/* Bouton secondaire "Voir le détail" */
+.produit-carte .button-small {
+    width: auto;                                      /* Largeur automatique */
+    padding: 6px 12px;                                /* Espacement harmonisé avec stock */
+    background-color: #3498db;                         /* Couleur bleue */
+    color: white;                                     /* Texte blanc pour contraste */
+    font-size: 0.8em;                                 /* Taille harmonisée avec stock */
+    font-weight: bold;                                /* Texte en gras */
+    margin-top: 8px;                                  /* Marge supérieure */
+    border-radius: 4px;                               /* Coins arrondis harmonisés */
+    text-decoration: none;                            /* Supprime le soulignement */
+    display: inline-block;                            /* Affichage en ligne */
+    transition: all 0.3s ease;                        /* Transition complète */
+}
+
+.produit-carte .button-small:hover {
+    background-color: #2980b9;                         /* Bleu plus foncé au survol */
+    transform: translateY(-1px);                       /* Petit effet de levée */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);            /* Petite ombre */
+}
+
+/* === STOCK STATUS === */
+.stock {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 8px 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.stock-normal {
+    color: #27ae60;
+    background-color: #d5f4e6;
+}
+
+.stock-faible {
+    color: #e67e22;
+    background-color: #fdeaa7;
+}
+
+.stock-epuise {
+    color: #e74c3c;
+    background-color: #fadbd8;
+}
+
+.produit-carte button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
