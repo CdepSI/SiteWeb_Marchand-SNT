@@ -1,5 +1,8 @@
 
-/* === SECTION HISTORIQUE === */
+/* === SECTION HISTORIQUE ===
+   Barre latérale affichant les produits récemment consultés
+   Utilise les cookies pour mémoriser l'historique de navigation
+*/
 .section-historique {
     margin-top: 50px;
     padding-top: 30px;
@@ -19,6 +22,7 @@
     overflow-y: auto;
 }
 
+/* Zone d'information sur les cookies */
 .info-cookies {
     background-color: #fff3cd;
     border: 2px solid #ffc107;
@@ -40,6 +44,7 @@
     color: #856404;
 }
 
+/* Style spécial pour les produits dans l'historique */
 .produit-historique {
     opacity: 0.9;
     border: 2px dashed #ffc107;
@@ -71,7 +76,7 @@
     margin: 10px 0;
 }
 
-/* Responsive pour la sidebar */
+/* Responsive pour la sidebar - Adaptation pour écrans moyens */
 @media (max-width: 1200px) {
     .section-historique {
         position: static;
@@ -83,6 +88,7 @@
     }
 }
 
+/* Responsive pour mobiles */
 @media (max-width: 768px) {
     .produit-detail {
         grid-template-columns: 1fr;

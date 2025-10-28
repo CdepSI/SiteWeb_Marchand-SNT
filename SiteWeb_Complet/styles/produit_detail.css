@@ -1,5 +1,8 @@
 
-/* === PAGE DÉTAIL PRODUIT === */
+/* === PAGE DÉTAIL PRODUIT ===
+   Mise en page en deux colonnes pour l'image et les informations du produit
+   Utilise CSS Grid pour une disposition responsive
+*/
 .produit-detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -76,7 +79,10 @@
     font-size: 0.9em;
 }
 
-/* === STOCK STATUS === */
+/* === STOCK STATUS ===
+   Indicateurs de stock pour la page détail produit
+   Même système de couleurs que la page produits
+*/
 .stock {
     font-size: 1em;
     font-weight: bold;

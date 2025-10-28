@@ -1,14 +1,15 @@
 /* ==========================================
-   STYLES POUR LA PAGE PRODUITS
-   ==========================================
+    STYLES POUR LA PAGE PRODUITS
+    ==========================================
 
-   Ce fichier contient tous les styles CSS pour la page d'affichage des produits.
-   Il définit l'apparence des cartes produits, des boutons et des indicateurs de stock.
-*/
+    Ce fichier contient tous les styles CSS pour la page d'affichage des produits.
+    Il définit l'apparence des cartes produits, des boutons et des indicateurs de stock.
+ */
 
 /* === GRILLE DE PRODUITS ===
-   Définit la disposition en grille responsive des cartes produits
-*/
+    Définit la disposition en grille responsive des cartes produits
+    Utilise CSS Grid avec colonnes adaptatives selon la taille d'écran
+ */
 .produits-grid {
     display: grid;                                    /* Utilise CSS Grid pour la disposition */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colonnes adaptatives */
@@ -17,8 +18,9 @@
 }
 
 /* === CARTES PRODUITS ===
-   Styles pour chaque carte individuelle représentant un produit
-*/
+    Styles pour chaque carte individuelle représentant un produit
+    Cartes blanches avec bordures et effets au survol
+ */
 .produit-carte {
     border: 1px solid #ddd;                           /* Bordure grise fine */
     border-radius: 8px;                               /* Coins arrondis */
@@ -64,8 +66,9 @@
 }
 
 /* === BOUTONS ===
-   Styles pour tous les boutons de la page produits
-*/
+    Styles pour tous les boutons de la page produits
+    Boutons principaux pour ajouter au panier
+ */
 
 /* Bouton principal "Ajouter au panier" */
 .produit-carte button {
@@ -111,8 +114,10 @@
     transform: translateY(-1px);                       /* Petit effet de levée */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);            /* Petite ombre */
 }
-
-/* === STOCK STATUS === */
+/* === STOCK STATUS ===
+    Indicateurs visuels pour le niveau de stock des produits
+    Couleurs différentes selon la disponibilité
+ */
 .stock {
     font-size: 0.9em;
     font-weight: bold;

@@ -1,4 +1,6 @@
-/* === PAGE ACCUEIL === */
+/* === PAGE ACCUEIL ===
+   Section d'accueil principale avec message de bienvenue
+*/
 .hero {
     text-align: center;
     padding: 30px;
@@ -20,6 +22,7 @@
     padding: 20px;
 }
 
+/* Boutons d'action principaux de la page d'accueil */
 .actions {
     display: flex;
     gap: 15px;
@@ -28,7 +31,10 @@
     flex-wrap: wrap;
 }
 
-/* === BOUTONS === */
+/* === BOUTONS ===
+   Styles pour tous les boutons du site
+   Différentes variantes pour différentes actions
+*/
 .button {
     display: inline-block;
     padding: 12px 30px;
@@ -46,6 +52,7 @@
     background-color: #16a085;
 }
 
+/* Bouton secondaire (bleu) */
 .button-secondary {
     background-color: #3498db;
 }
@@ -54,6 +61,7 @@
     background-color: #2980b9;
 }
 
+/* Bouton danger (rouge) */
 .button-danger {
     background-color: #e74c3c;
 }
@@ -62,6 +70,7 @@
     background-color: #c0392b;
 }
 
+/* Bouton petit */
 .button-small {
     padding: 5px 10px;
     font-size: 0.9em;

@@ -1,4 +1,7 @@
-/* === BARRE DE RECHERCHE === */
+/* === BARRE DE RECHERCHE ===
+   Formulaire de recherche avec champ de saisie et boutons
+   Centré et responsive pour tous les écrans
+*/
 .barre-recherche {
     display: flex;
     gap: 10px;
@@ -45,7 +48,7 @@
     background-color: #2980b9;
 }
 
-/* Mise en évidence des résultats de recherche */
+/* Mise en évidence des résultats de recherche - Surlignage jaune des termes trouvés */
 mark {
     background-color: #fff59d;
     padding: 2px 4px;

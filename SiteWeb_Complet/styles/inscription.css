@@ -1,4 +1,7 @@
-/* === BOUTONS === */
+/* === BOUTONS ===
+   Styles des boutons pour la page d'inscription
+   Même styles que les boutons globaux pour cohérence
+*/
 .button {
     display: inline-block;
     padding: 12px 30px;
@@ -37,7 +40,10 @@
     font-size: 0.9em;
 }
 
-/* === FORMULAIRE === */
+/* === FORMULAIRE ===
+   Styles pour le formulaire d'inscription
+   Conteneur centré avec fond gris clair
+*/
 .formulaire-conteneur {
     max-width: 600px;
     margin: 0 auto;
@@ -92,7 +98,10 @@ form {
     border: 1px solid #f5c6cb;
 }
 
-/* === LISTE CLIENTS === */
+/* === LISTE CLIENTS ===
+   Tableau affichant la liste des clients inscrits
+   Style avec en-têtes sombres et lignes alternées
+*/
 .liste-inscrits {
     margin-top: 40px;
 }
