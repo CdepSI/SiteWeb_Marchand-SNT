@@ -8,10 +8,10 @@
       <text>QCM_HTML_01</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[Quelle est la balise racine qui contient tout le contenu d'une page HTML ?]]></text>
+      <text><![CDATA[<p>Quelle est la balise racine qui contient tout le contenu d'une page HTML ?</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[La balise &lt;html&gt; est la balise racine qui englobe tout le contenu de la page.]]></text>
+      <text><![CDATA[<p>La balise <code>&lt;html&gt;</code> est la balise racine qui englobe tout le contenu de la page.</p>]]></text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -20,33 +20,33 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="html">
-      <text><![CDATA[<!DOCTYPE html>]]></text>
+      <text><![CDATA[<p>&lt;!DOCTYPE html&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;!DOCTYPE html&gt; est la déclaration de type de document, pas la balise racine.]]></text>
+        <text><![CDATA[<p>&lt;!DOCTYPE html&gt; est la déclaration de type de document, pas la balise racine.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<head>]]></text>
+      <text><![CDATA[<p>&lt;head&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;head&gt; contient les informations meta, pas tout le contenu.]]></text>
+        <text><![CDATA[<p>&lt;head&gt; contient les informations meta, pas tout le contenu.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<body>]]></text>
+      <text><![CDATA[<p>&lt;body&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;body&gt; contient le contenu visible, mais pas tout le document.]]></text>
+        <text><![CDATA[<p>&lt;body&gt; contient le contenu visible, mais pas tout le document.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="100" format="html">
-      <text><![CDATA[<html>]]></text>
+      <text><![CDATA[<p>&lt;html&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[Correct ! &lt;html&gt; est la balise racine.]]></text>
+        <text><![CDATA[<p>Correct ! &lt;html&gt; est la balise racine.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<title>]]></text>
+      <text><![CDATA[<p>&lt;title&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;title&gt; définit le titre de la page dans l'onglet du navigateur.]]></text>
+        <text><![CDATA[<p>&lt;title&gt; définit le titre de la page dans l'onglet du navigateur.</p>]]></text>
       </feedback>
     </answer>
   </question>
@@ -56,10 +56,10 @@
       <text>QCM_HTML_02</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[Quelle balise contient les informations "méta" sur la page web comme le titre, les liens CSS et les scripts JavaScript ?]]></text>
+      <text><![CDATA[<p>Quelle balise contient les informations "méta" sur la page web comme le titre, les liens CSS et les scripts JavaScript ?</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[La balise &lt;head&gt; contient toutes les informations meta de la page.]]></text>
+      <text><![CDATA[<p>La balise <code>&lt;head&gt;</code> contient toutes les informations meta de la page.</p>]]></text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -68,33 +68,33 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="html">
-      <text><![CDATA[<html>]]></text>
+      <text><![CDATA[<p>&lt;html&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;html&gt; est la balise racine qui contient tout le document.]]></text>
+        <text><![CDATA[<p>&lt;html&gt; est la balise racine qui contient tout le document.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<body>]]></text>
+      <text><![CDATA[<p>&lt;body&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;body&gt; contient le contenu visible de la page.]]></text>
+        <text><![CDATA[<p>&lt;body&gt; contient le contenu visible de la page.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="100" format="html">
-      <text><![CDATA[<head>]]></text>
+      <text><![CDATA[<p>&lt;head&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[Correct ! &lt;head&gt; contient les informations meta.]]></text>
+        <text><![CDATA[<p>Correct ! &lt;head&gt; contient les informations meta.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<title>]]></text>
+      <text><![CDATA[<p>&lt;title&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;title&gt; est une balise contenue dans &lt;head&gt;.]]></text>
+        <text><![CDATA[<p>&lt;title&gt; est une balise contenue dans &lt;head&gt;.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<meta>]]></text>
+      <text><![CDATA[<p>&lt;meta&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;meta&gt; est une balise contenue dans &lt;head&gt;.]]></text>
+        <text><![CDATA[<p>&lt;meta&gt; est une balise contenue dans &lt;head&gt;.</p>]]></text>
       </feedback>
     </answer>
   </question>
@@ -104,10 +104,10 @@
       <text>QCM_HTML_03</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[Quelle balise contient tout le contenu visible de la page web comme les titres, paragraphes et images ?]]></text>
+      <text><![CDATA[<p>Quelle balise contient tout le contenu visible de la page web comme les titres, paragraphes et images ?</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[La balise &lt;body&gt; contient tout le contenu visible de la page web.]]></text>
+      <text><![CDATA[<p>La balise <code>&lt;body&gt;</code> contient tout le contenu visible de la page web.</p>]]></text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -116,33 +116,33 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="html">
-      <text><![CDATA[<html>]]></text>
+      <text><![CDATA[<p>&lt;html&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;html&gt; contient tout le document, y compris &lt;head&gt;.]]></text>
+        <text><![CDATA[<p>&lt;html&gt; contient tout le document, y compris &lt;head&gt;.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<head>]]></text>
+      <text><![CDATA[<p>&lt;head&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;head&gt; contient les informations meta, pas le contenu visible.]]></text>
+        <text><![CDATA[<p>&lt;head&gt; contient les informations meta, pas le contenu visible.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="100" format="html">
-      <text><![CDATA[<body>]]></text>
+      <text><![CDATA[<p>&lt;body&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[Correct ! &lt;body&gt; contient le contenu visible.]]></text>
+        <text><![CDATA[<p>Correct ! &lt;body&gt; contient le contenu visible.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<title>]]></text>
+      <text><![CDATA[<p>&lt;title&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;title&gt; définit le titre dans l'onglet, pas le contenu visible.]]></text>
+        <text><![CDATA[<p>&lt;title&gt; définit le titre dans l'onglet, pas le contenu visible.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<meta>]]></text>
+      <text><![CDATA[<p>&lt;meta&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;meta&gt; contient des informations meta invisibles.]]></text>
+        <text><![CDATA[<p>&lt;meta&gt; contient des informations meta invisibles.</p>]]></text>
       </feedback>
     </answer>
   </question>
@@ -152,10 +152,10 @@
       <text>QCM_HTML_04</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[Quelle est la syntaxe correcte pour insérer une image dans une page HTML ?]]></text>
+      <text><![CDATA[<p>Quelle est la syntaxe correcte pour insérer une image dans une page HTML ?</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[La balise &lt;img&gt; avec les attributs src et alt est la syntaxe correcte pour insérer une image.]]></text>
+      <text><![CDATA[<p>La balise <code>&lt;img&gt;</code> avec les attributs src et alt est la syntaxe correcte pour insérer une image.</p>]]></text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -164,33 +164,33 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="html">
-      <text><![CDATA[<image src="photo.jpg" alt="Description">]]></text>
+      <text><![CDATA[<p>&lt;image src="photo.jpg" alt="Description"&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;image&gt; n'est pas une balise HTML valide.]]></text>
+        <text><![CDATA[<p>&lt;image&gt; n'est pas une balise HTML valide.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<img href="photo.jpg" alt="Description">]]></text>
+      <text><![CDATA[<p>&lt;img href="photo.jpg" alt="Description"&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[L'attribut pour l'URL de l'image est src, pas href.]]></text>
+        <text><![CDATA[<p>L'attribut pour l'URL de l'image est src, pas href.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="100" format="html">
-      <text><![CDATA[<img src="photo.jpg" alt="Description">]]></text>
+      <text><![CDATA[<p>&lt;img src="photo.jpg" alt="Description"&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[Correct ! C'est la syntaxe standard pour insérer une image.]]></text>
+        <text><![CDATA[<p>Correct ! C'est la syntaxe standard pour insérer une image.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<picture src="photo.jpg" alt="Description">]]></text>
+      <text><![CDATA[<p>&lt;picture src="photo.jpg" alt="Description"&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;picture&gt; est utilisé pour des images responsives, pas pour une image simple.]]></text>
+        <text><![CDATA[<p>&lt;picture&gt; est utilisé pour des images responsives, pas pour une image simple.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<photo src="photo.jpg" alt="Description">]]></text>
+      <text><![CDATA[<p>&lt;photo src="photo.jpg" alt="Description"&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;photo&gt; n'est pas une balise HTML valide.]]></text>
+        <text><![CDATA[<p>&lt;photo&gt; n'est pas une balise HTML valide.</p>]]></text>
       </feedback>
     </answer>
   </question>
@@ -200,10 +200,10 @@
       <text>QCM_HTML_05</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[Quelle déclaration doit toujours être la première ligne d'un document HTML5 ?]]></text>
+      <text><![CDATA[<p>Quelle déclaration doit toujours être la première ligne d'un document HTML5 ?</p>]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;!DOCTYPE html&gt; est la déclaration obligatoire en première ligne d'un document HTML5.]]></text>
+      <text><![CDATA[<p><code>&lt;!DOCTYPE html&gt;</code> est la déclaration obligatoire en première ligne d'un document HTML5.</p>]]></text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -212,33 +212,33 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="html">
-      <text><![CDATA[<html lang="fr">]]></text>
+      <text><![CDATA[<p>&lt;html lang="fr"&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;html&gt; vient après la déclaration DOCTYPE.]]></text>
+        <text><![CDATA[<p>&lt;html&gt; vient après la déclaration DOCTYPE.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<head>]]></text>
+      <text><![CDATA[<p>&lt;head&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;head&gt; vient après &lt;html&gt;.]]></text>
+        <text><![CDATA[<p>&lt;head&gt; vient après &lt;html&gt;.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="100" format="html">
-      <text><![CDATA[<!DOCTYPE html>]]></text>
+      <text><![CDATA[<p>&lt;!DOCTYPE html&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[Correct ! C'est la déclaration obligatoire en première ligne.]]></text>
+        <text><![CDATA[<p>Correct ! C'est la déclaration obligatoire en première ligne.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<body>]]></text>
+      <text><![CDATA[<p>&lt;body&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;body&gt; vient après &lt;head&gt;.]]></text>
+        <text><![CDATA[<p>&lt;body&gt; vient après &lt;head&gt;.</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[<title>Ma page</title>]]></text>
+      <text><![CDATA[<p>&lt;title&gt;Ma page&lt;/title&gt;</p>]]></text>
       <feedback format="html">
-        <text><![CDATA[&lt;title&gt; est contenu dans &lt;head&gt;.]]></text>
+        <text><![CDATA[<p>&lt;title&gt; est contenu dans &lt;head&gt;.</p>]]></text>
       </feedback>
     </answer>
   </question>
