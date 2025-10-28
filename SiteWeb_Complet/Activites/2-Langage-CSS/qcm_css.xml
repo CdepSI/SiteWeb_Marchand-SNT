@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <!-- QCM CSS - Activité 2 -->
+
+  <question type="multichoice">
+    <name>
+      <text>QCM_CSS_01</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Quelle est la signification de CSS ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>CSS signifie Cascading Style Sheets, un langage pour décrire la présentation des documents HTML.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Computer Style Sheets</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrect. CSS signifie Cascading Style Sheets.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Creative Style Sheets</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrect. CSS signifie Cascading Style Sheets.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Cascading Style Sheets</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correct ! CSS signifie Cascading Style Sheets.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Colorful Style Sheets</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrect. CSS signifie Cascading Style Sheets.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>QCM_CSS_02</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Quelle méthode est recommandée pour intégrer le CSS dans une page HTML ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>La méthode externe utilisant un fichier .css séparé est recommandée pour séparer le contenu de la présentation.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Méthode en ligne avec l'attribut style</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La méthode en ligne n'est pas recommandée car elle mélange contenu et présentation.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Méthode interne avec la balise <style></p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La méthode interne est moins maintenable que la méthode externe.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Méthode externe avec un fichier .css séparé</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correct ! La méthode externe est recommandée pour séparer contenu et présentation.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Méthode avec JavaScript</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Le JavaScript n'est pas une méthode standard pour intégrer le CSS.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>QCM_CSS_03</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Quelle propriété CSS permet d'arrondir les coins d'un élément ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>La propriété border-radius permet d'arrondir les coins d'un élément.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>border-style</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>border-style définit le style de la bordure, pas l'arrondi des coins.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>border-width</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>border-width définit l'épaisseur de la bordure, pas l'arrondi des coins.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>border-radius</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correct ! border-radius arrondit les coins d'un élément.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>border-color</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>border-color définit la couleur de la bordure, pas l'arrondi des coins.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>QCM_CSS_04</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Quelle est la différence entre padding et margin en CSS ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Le padding est l'espace intérieur entre le contenu et la bordure, tandis que le margin est l'espace extérieur autour de l'élément.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Padding est extérieur, margin est intérieur</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrect. C'est l'inverse : padding est intérieur, margin est extérieur.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Padding est intérieur, margin est extérieur</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correct ! Padding est l'espace intérieur, margin est l'espace extérieur.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Les deux sont identiques</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrect. Padding et margin ont des rôles différents.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Padding affecte la couleur, margin affecte la taille</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrect. Les deux affectent les espacements, pas la couleur ou la taille directement.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>QCM_CSS_05</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Quel pseudo-sélecteur permet de définir des styles au survol de la souris ?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Le pseudo-sélecteur :hover permet de définir des styles qui s'appliquent lorsqu'un élément est survolé par le curseur.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>:active</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>:active s'applique quand l'élément est cliqué, pas au survol.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>:focus</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>:focus s'applique quand l'élément reçoit le focus, pas au survol.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>:hover</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correct ! :hover s'applique au survol de la souris.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>:visited</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>:visited s'applique aux liens déjà visités, pas au survol.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>
