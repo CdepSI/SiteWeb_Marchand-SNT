@@ -1,0 +1,129 @@
+/* === BOUTONS ===
+   Styles des boutons pour la page d'inscription
+   Même styles que les boutons globaux pour cohérence
+*/
+.button { /* Bouton principal */
+    display: inline-block; /* Affichage en ligne */
+    padding: 12px 30px; /* Espacement intérieur */
+    background-color: #1abc9c; /* Fond vert */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur pointer */
+    font-size: 1em; /* Taille de police normale */
+    transition: background-color 0.3s; /* Animation douce */
+}
+
+.button:hover { /* Au survol du bouton principal */
+    background-color: #16a085; /* Vert plus foncé */
+}
+
+.button-secondary { /* Bouton secondaire (bleu) */
+    background-color: #3498db; /* Fond bleu */
+}
+
+.button-secondary:hover { /* Au survol du bouton secondaire */
+    background-color: #2980b9; /* Bleu plus foncé */
+}
+
+.button-danger { /* Bouton danger (rouge) */
+    background-color: #e74c3c; /* Fond rouge */
+}
+
+.button-danger:hover { /* Au survol du bouton danger */
+    background-color: #c0392b; /* Rouge plus foncé */
+}
+
+.button-small { /* Bouton petit */
+    padding: 5px 10px; /* Espacement réduit */
+    font-size: 0.9em; /* Police plus petite */
+}
+
+/* === FORMULAIRE ===
+   Styles pour le formulaire d'inscription
+   Conteneur centré avec fond gris clair
+*/
+.formulaire-conteneur { /* Conteneur du formulaire */
+    max-width: 600px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+form { /* Élément formulaire */
+    background-color: #ecf0f1; /* Fond gris clair */
+    padding: 30px; /* Espacement intérieur */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+.champ-formulaire { /* Chaque champ du formulaire */
+    margin-bottom: 20px; /* Marge inférieure */
+}
+
+.champ-formulaire label { /* Étiquettes des champs */
+    display: block; /* Affichage en bloc */
+    margin-bottom: 5px; /* Marge inférieure */
+    color: #2c3e50; /* Couleur bleue foncée */
+    font-weight: bold; /* Texte en gras */
+}
+
+.champ-formulaire input { /* Champs de saisie */
+    width: 100%; /* Largeur pleine */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #bdc3c7; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1em; /* Taille de police normale */
+}
+
+.champ-formulaire input:focus { /* État focus des champs */
+    outline: none; /* Supprime le contour par défaut */
+    border-color: #1abc9c; /* Bordure verte */
+}
+
+.message { /* Messages de feedback */
+    margin-top: 20px; /* Marge supérieure */
+    padding: 15px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    text-align: center; /* Centrage du texte */
+}
+
+.message-succes { /* Message de succès */
+    background-color: #d4edda; /* Fond vert clair */
+    color: #155724; /* Texte vert foncé */
+    border: 1px solid #c3e6cb; /* Bordure verte */
+}
+
+.message-erreur { /* Message d'erreur */
+    background-color: #f8d7da; /* Fond rouge clair */
+    color: #721c24; /* Texte rouge foncé */
+    border: 1px solid #f5c6cb; /* Bordure rouge */
+}
+
+/* === LISTE CLIENTS ===
+   Tableau affichant la liste des clients inscrits
+   Style avec en-têtes sombres et lignes alternées
+*/
+.liste-inscrits { /* Conteneur de la liste des clients */
+    margin-top: 40px; /* Marge supérieure importante */
+}
+
+.tableau-clients { /* Tableau des clients */
+    width: 100%; /* Largeur pleine */
+    border-collapse: collapse; /* Fusion des bordures */
+    margin: 20px 0; /* Marges verticale */
+}
+
+.tableau-clients th, /* En-têtes du tableau */
+.tableau-clients td { /* Cellules du tableau */
+    padding: 12px; /* Espacement intérieur */
+    text-align: left; /* Alignement à gauche */
+    border-bottom: 1px solid #ddd; /* Bordure inférieure */
+}
+
+.tableau-clients th { /* Style des en-têtes */
+    background-color: #34495e; /* Fond bleu foncé */
+    color: white; /* Texte blanc */
+}
+
+.tableau-clients tr:hover { /* Au survol des lignes */
+    background-color: #f5f5f5; /* Fond gris très clair */
+}

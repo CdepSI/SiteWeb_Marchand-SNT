@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[TITRE DE LA PAGE]</title>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>[TITRE PRINCIPAL]</h1>
+            <img src="../../images/logo.png" alt="Logo Boutique SNT" style="height: 60px; width: auto;">
+        </div>
+
+        <div class="barre-recherche">
+            <input type="text"
+                   id="input-recherche"
+                   placeholder="🔍 Rechercher un produit...">
+            <button onclick="rechercher()">Rechercher</button>
+            <button onclick="afficherIndex()">Voir l'index</button>
+        </div>
+
+        <!-- AJOUTER LE MENU ICI -->
+
+    </header>
+
+    <main>
+        <h2>[TITRE PRINCIPAL DE LA PAGE]</h2>
+
+        <div class="plan-site">
+            <div class="section-plan">
+                <h3>[TITRE SECTION 1]</h3>
+                <ul>
+                    <li><a href="../index.html">[LIEN ACCUEIL]</a></li>
+                    <li><a href="produits.html">[LIEN PRODUITS]</a></li>
+                    <li><a href="panier.html">[LIEN PANIER]</a></li>
+                    <li><a href="inscription.html">[LIEN INSCRIPTION]</a></li>
+                    <li><a href="plan.html">[LIEN PLAN]</a></li>
+                </ul>
+            </div>
+
+            <div class="section-plan">
+                <h3>[TITRE SECTION 2]</h3>
+                <p>[PARAGRAPHE 1]</p>
+                <p>[PARAGRAPHE 2]</p>
+            </div>
+
+            <div class="section-plan">
+                <h3>[TITRE SECTION 3]</h3>
+                <ul>
+                    <li>[FONCTIONNALITE 1]</li>
+                    <li>[FONCTIONNALITE 2]</li>
+                    <li>[FONCTIONNALITE 3]</li>
+                    <li>[FONCTIONNALITE 4]</li>
+                    <li>[FONCTIONNALITE 5]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section des produits récemment consultés -->
+        <div class="section-historique">
+            <h2>[TITRE SECTION HISTORIQUE]</h2>
+            <div class="info-cookies">
+                <p><em>[TEXTE INFO COOKIES]</em></p>
+                <button onclick="afficherCookies()" class="button-small">
+                    [TEXTE BOUTON COOKIES]
+                </button>
+                <button onclick="supprimerHistorique()" class="button-small button-danger">
+                    [TEXTE BOUTON EFFACER]
+                </button>
+            </div>
+            <div id="historique-produits" class="produits-grid">
+                <!-- Les produits récents seront affichés ici -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>[TEXTE DU FOOTER]</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+/* === PAGE DÉTAIL PRODUIT ===
+   Mise en page en deux colonnes pour l'image et les informations du produit
+   Utilise CSS Grid pour une disposition responsive
+*/
+.produit-detail { /* Conteneur principal du détail produit */
+    display: grid; /* Utilise CSS Grid */
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 40px; /* Espace entre les colonnes */
+    margin: 20px 0; /* Marges verticale */
+}
+
+.produit-detail-image img { /* Image du produit */
+    width: 100%; /* Largeur pleine */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre légère */
+}
+
+.produit-detail-info { /* Informations du produit */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Disposition verticale */
+    gap: 20px; /* Espace entre les éléments */
+}
+
+.produit-detail-description { /* Description du produit */
+    font-size: 1.1em; /* Taille de police légèrement agrandie */
+    line-height: 1.6; /* Hauteur de ligne pour lisibilité */
+    color: #555; /* Couleur grise */
+}
+
+.produit-detail-prix { /* Prix du produit */
+    font-size: 2em; /* Taille de police double */
+    color: #27ae60; /* Couleur verte */
+    font-weight: bold; /* Texte en gras */
+}
+
+.produit-detail-actions { /* Boutons d'action du produit */
+    display: flex; /* Utilise Flexbox */
+    gap: 15px; /* Espace entre les boutons */
+    margin-top: 20px; /* Marge supérieure */
+}
+
+/* === BOUTONS === */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #16a085;
+}
+
+.button-secondary {
+    background-color: #3498db;
+}
+
+.button-secondary:hover {
+    background-color: #2980b9;
+}
+
+.button-danger {
+    background-color: #e74c3c;
+}
+
+.button-danger:hover {
+    background-color: #c0392b;
+}
+
+.button-small {
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+/* === STOCK STATUS ===
+   Indicateurs de stock pour la page détail produit
+   Même système de couleurs que la page produits
+*/
+.stock { /* Indicateur de stock */
+    font-size: 1em; /* Taille de police normale */
+    font-weight: bold; /* Texte en gras */
+    margin: 10px 0; /* Marges verticale */
+    padding: 8px 12px; /* Espacement intérieur */
+    border-radius: 6px; /* Coins arrondis */
+    display: inline-block; /* Affichage en ligne */
+}
+
+.stock-normal { /* Stock normal (vert) */
+    color: #27ae60; /* Texte vert */
+    background-color: #d5f4e6; /* Fond vert clair */
+    border: 1px solid #27ae60; /* Bordure verte */
+}
+
+.stock-faible { /* Stock faible (orange) */
+    color: #e67e22; /* Texte orange */
+    background-color: #fdeaa7; /* Fond orange clair */
+    border: 1px solid #e67e22; /* Bordure orange */
+}
+
+.stock-epuise { /* Stock épuisé (rouge) */
+    color: #e74c3c; /* Texte rouge */
+    background-color: #fadbd8; /* Fond rouge clair */
+    border: 1px solid #e74c3c; /* Bordure rouge */
+}
+
+.produit-detail-actions button:disabled { /* Boutons désactivés */
+    background-color: #bdc3c7; /* Fond gris */
+    cursor: not-allowed; /* Curseur d'interdiction */
+    opacity: 0.6; /* Transparence */
+}

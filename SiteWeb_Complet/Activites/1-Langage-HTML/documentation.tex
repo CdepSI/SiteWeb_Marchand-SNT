@@ -1,0 +1,427 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{setspace}
+
+\geometry{margin=2.5cm,top=3cm,bottom=3cm}
+\onehalfspacing
+
+\lstset{
+    language=HTML,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true
+}
+
+\title{Activité 1 : Langage HTML - Création d'un site web marchand}
+\author{Documentation pour les élèves}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+Cette activité vous permet de découvrir les bases du langage HTML en créant un site web marchand simple. Vous partirez d'une structure de pages HTML pré-établies où certains éléments sont à compléter. Votre objectif est de remplacer les textes entre crochets par du contenu approprié et d'ajouter le menu de navigation.
+
+Le site final sera une boutique en ligne avec plusieurs pages interconnectées, une barre de recherche, et un système de suivi des produits consultés via les cookies.
+
+\section{Les balises HTML de base}
+
+Avant de modifier vos pages, il est important de comprendre la structure de base d'un document HTML. Voici les balises essentielles :
+
+\subsection{La balise \texttt{<!DOCTYPE html>}}
+Cette déclaration définit le type de document et doit toujours être la première ligne de votre fichier HTML. Elle indique au navigateur qu'il s'agit d'un document HTML5.
+
+\subsection{La balise \texttt{<html>}}
+C'est la balise racine qui contient tout le contenu de votre page web. Elle englobe toutes les autres balises.
+
+\subsection{La balise \texttt{<head>}}
+Cette section contient les informations "méta" sur votre page :
+\begin{itemize}
+\item Le titre de la page (\texttt{<title>})
+\item Les liens vers les feuilles de style CSS (\texttt{<link>})
+\item Les scripts JavaScript (\texttt{<script>})
+\item Les informations de codage (\texttt{<meta charset>})
+\item Les informations pour les moteurs de recherche (\texttt{<meta>})
+\end{itemize}
+
+\textbf{Exemple :}
+\begin{lstlisting}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de ma page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+\end{lstlisting}
+
+\subsection{La balise \texttt{<body>}}
+Cette section contient tout le contenu visible de votre page web :
+\begin{itemize}
+\item Les titres (\texttt{<h1>}, \texttt{<h2>}, etc.)
+\item Les paragraphes (\texttt{<p>})
+\item Les images (\texttt{<img>})
+\item Les liens (\texttt{<a>})
+\item Les formulaires (\texttt{<form>})
+\item Les listes (\texttt{<ul>}, \texttt{<ol>})
+\item Les divisions (\texttt{<div>})
+\end{itemize}
+
+\textbf{Exemple de structure complète :}
+\begin{lstlisting}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma première page</title>
+</head>
+<body>
+    <h1>Mon titre principal</h1>
+    <p>Mon premier paragraphe.</p>
+</body>
+</html>
+\end{lstlisting}
+
+\subsection{Conseils pour bien débuter}
+\begin{itemize}
+\item Respectez toujours l'ordre des balises : \texttt{<!DOCTYPE html>} → \texttt{<html>} → \texttt{<head>} → \texttt{<body>}
+\item Fermez toujours vos balises avec la barre oblique : \texttt{</balise>}
+\item Utilisez l'indentation pour rendre votre code plus lisible
+\item Testez régulièrement vos modifications dans un navigateur
+\end{itemize}
+
+\section{Structure générale du site}
+
+\subsection{Arborescence du site}
+
+Le site est organisé selon la structure suivante :
+
+\begin{itemize}
+\item \textbf{index.html} : Page d'accueil
+\item \textbf{pages/}
+  \begin{itemize}
+  \item inscription.html : Formulaire d'inscription
+  \item panier.html : Gestion du panier
+  \item plan.html : Plan du site
+  \item produit\_detail.html : Détail d'un produit
+  \item produits.html : Catalogue des produits
+  \item recherche.html : Résultats de recherche
+  \end{itemize}
+\end{itemize}
+
+\subsection{Éléments communs à toutes les pages}
+
+Chaque page contient plusieurs sections communes :
+
+\subsubsection{Barre de recherche}
+Située dans l'en-tête, elle permet aux utilisateurs de rechercher des produits. Elle contient :
+\begin{itemize}
+\item Un champ de saisie (\texttt{<input type="text">})
+\item Un bouton "Rechercher"
+\item Un bouton "Voir l'index"
+\end{itemize}
+
+\subsubsection{Section des produits récemment consultés}
+Cette section utilise les cookies pour mémoriser les produits visités par l'utilisateur. Elle comprend :
+\begin{itemize}
+\item Un titre explicatif
+\item Des boutons pour afficher ou effacer les cookies
+\item Une grille où s'affichent les produits récents
+\end{itemize}
+
+\subsubsection{Menu de navigation}
+
+Le menu de navigation est un élément essentiel de votre site web. Il permet aux utilisateurs de naviguer facilement entre les différentes pages. Le menu doit être ajouté à l'emplacement indiqué par le commentaire \texttt{<!-- AJOUTER LE MENU ICI -->} dans chaque page.
+
+\textbf{Structure du menu :}
+\begin{itemize}
+\item Utilisez la balise \texttt{<nav>} avec l'id \texttt{main-nav}
+\item Créez des liens \texttt{<a>} vers chaque page principale
+\item Respectez la hiérarchie des chemins relatifs selon la page où vous vous trouvez
+\end{itemize}
+
+\textbf{Exemple de menu pour la page d'accueil (index.html) :}
+
+\begin{lstlisting}
+<nav id="main-nav">
+    <a href="index.html">Accueil</a>
+    <a href="pages/produits.html">Produits</a>
+    <a href="pages/panier.html">Panier \faShoppingCart{}</a>
+    <a href="pages/inscription.html">Inscription</a>
+    <a href="pages/plan.html">Plan du site</a>
+</nav>
+\end{lstlisting}
+
+\textbf{Exemple de menu pour les pages dans le dossier pages/ :}
+
+\begin{lstlisting}
+<nav id="main-nav">
+    <a href="../index.html">Accueil</a>
+    <a href="produits.html">Produits</a>
+    <a href="panier.html">Panier \faShoppingCart{}</a>
+    <a href="inscription.html">Inscription</a>
+    <a href="plan.html">Plan du site</a>
+</nav>
+\end{lstlisting}
+
+\textbf{À propos des chemins relatifs :}
+\begin{itemize}
+\item \texttt{../} permet de remonter d'un niveau dans l'arborescence
+\item Les chemins doivent être adaptés selon l'emplacement de chaque page
+\item Testez toujours vos liens en ouvrant les pages dans un navigateur
+\end{itemize}
+
+\section{Rôle des différentes pages}
+
+\subsection{Page d'accueil (index.html)}
+C'est la page principale du site. Elle présente :
+\begin{itemize}
+\item Le titre de la boutique
+\item Une section "héros" avec un message de bienvenue
+\item Une section de présentation
+\item Des boutons d'action (vers les produits et l'inscription)
+\item La section des produits récemment consultés
+\end{itemize}
+
+\subsection{Page d'inscription (pages/inscription.html)}
+Permet aux visiteurs de s'inscrire en tant que clients. Contient :
+\begin{itemize}
+\item Un formulaire avec champs pour prénom, nom, email, ville et âge
+\item Un bouton de soumission
+\item Une section affichant la liste des inscrits
+\item La section des produits récemment consultés
+\end{itemize}
+
+\subsection{Page panier (pages/panier.html)}
+Affiche le contenu du panier de l'utilisateur :
+\begin{itemize}
+\item La liste des articles sélectionnés
+\item Le total du panier
+\item Des boutons pour vider ou valider la commande
+\item La section des produits récemment consultés
+\end{itemize}
+
+\subsection{Page plan du site (pages/plan.html)}
+Présente la structure du site :
+\begin{itemize}
+\item Liste des pages principales avec descriptions
+\item Informations sur le projet pédagogique
+\item Liste des fonctionnalités
+\item La section des produits récemment consultés
+\end{itemize}
+
+
+\section{Ajouter des images à vos pages}
+
+Pour enrichir vos pages web avec des images, vous pouvez utiliser la balise \texttt{<img>}. Voici comment procéder :
+
+\textbf{Syntaxe de base :}
+\begin{lstlisting}
+<img src="chemin/vers/image.jpg" alt="Description de l'image">
+\end{lstlisting}
+
+\textbf{Attributs importants :}
+\begin{itemize}
+\item \texttt{src} : chemin vers le fichier image (relatif ou absolu)
+\item \texttt{alt} : texte alternatif décrivant l'image (obligatoire pour l'accessibilité)
+\item \texttt{width} et \texttt{height} : dimensions de l'image (optionnel)
+\end{itemize}
+
+\textbf{Exemples d'utilisation :}
+\begin{itemize}
+\item Image dans le même dossier : \texttt{<img src="logo.png" alt="Logo de la boutique">}
+\item Image dans un sous-dossier : \texttt{<img src="images/photo.jpg" alt="Photo du produit">}
+\item Image dans le dossier parent : \texttt{<img src="../images/logo.png" alt="Logo principal">}
+\end{itemize}
+
+\textbf{Formats d'images supportés :}
+\begin{itemize}
+\item JPEG (.jpg, .jpeg) : pour les photos
+\item PNG (.png) : pour les images avec transparence
+\item GIF (.gif) : pour les animations simples
+\item WebP (.webp) : format moderne optimisé
+\end{itemize}
+
+\textbf{Conseils pour les images :}
+\begin{itemize}
+\item Utilisez des images de taille appropriée pour éviter de ralentir le chargement
+\item Toujours spécifier l'attribut \texttt{alt} pour l'accessibilité
+\item Organisez vos images dans un dossier dédié (ex: \texttt{images/})
+\end{itemize}
+
+\section{Instructions pour modifier les pages}
+
+Pour chaque page, vous devez remplacer les textes entre crochets \texttt{[...]} par du contenu approprié en français. Voici le détail pour chaque fichier :
+
+\subsubsection{index.html}
+
+\textbf{Objectif :} Cette page constitue la vitrine de votre boutique en ligne. Elle doit accueillir les visiteurs et les inciter à explorer le catalogue de produits.
+
+\begin{itemize}
+\item \texttt{[TITRE DE LA PAGE]} : "Boutique SNT - Accueil" \newline \textit{Objectif : Définir le titre qui apparaîtra dans l'onglet du navigateur}
+\item \texttt{[TITRE PRINCIPAL]} : "\faShoppingCart{} Boutique SNT" \newline \textit{Objectif : Donner un nom accrocheur à votre boutique avec un symbole représentatif}
+\item \texttt{[TITRE DE LA SECTION HERO]} : "Bienvenue sur notre boutique en ligne !" \newline \textit{Objectif : Accueillir chaleureusement les visiteurs dès leur arrivée}
+\item \texttt{[TEXTE DE PRESENTATION]} : "Découvrez nos produits et faites vos achats en toute simplicité." \newline \textit{Objectif : Présenter brièvement les avantages de votre boutique}
+\item \texttt{[TITRE DE LA SECTION PRESENTATION]} : "À propos de notre boutique" \newline \textit{Objectif : Introduire la section descriptive de votre commerce}
+\item \texttt{[PARAGRAPHE 1]} : "Notre boutique propose une sélection de produits de qualité." \newline \textit{Objectif : Mettre en avant la qualité de vos produits}
+\item \texttt{[PARAGRAPHE 2]} : "Naviguez dans notre catalogue et ajoutez vos articles préférés au panier !" \newline \textit{Objectif : Guider l'utilisateur vers l'action d'achat}
+\item \texttt{[TEXTE BOUTON 1]} : "Voir les produits" \newline \textit{Objectif : Inciter à découvrir le catalogue}
+\item \texttt{[TEXTE BOUTON 2]} : "S'inscrire" \newline \textit{Objectif : Encourager l'inscription des nouveaux clients}
+\item \texttt{[TITRE SECTION HISTORIQUE]} : "\faClockO{} Vous avez récemment consulté" \newline \textit{Objectif : Rappeler aux utilisateurs leurs consultations récentes}
+\item \texttt{[TEXTE INFO COOKIES]} : "Ces produits sont mémorisés dans un cookie sur votre navigateur" \newline \textit{Objectif : Expliquer le fonctionnement technique des cookies}
+\item \texttt{[TEXTE BOUTON COOKIES]} : "Voir mes cookies 🍪" \newline \textit{Objectif : Permettre la visualisation des données stockées}
+\item \texttt{[TEXTE BOUTON EFFACER]} : "Effacer l'historique" \newline \textit{Objectif : Offrir la possibilité de supprimer les données personnelles}
+\item \texttt{[TEXTE DU FOOTER]} : "© 2025 Boutique SNT - Projet pédagogique" \newline \textit{Objectif : Afficher les droits d'auteur et la nature éducative du projet}
+\end{itemize}
+
+Ajoutez le menu de navigation après le commentaire \texttt{<!-- AJOUTER LE MENU ICI -->} :
+
+\begin{lstlisting}
+<nav id="main-nav">
+    <a href="index.html">Accueil</a>
+    <a href="pages/produits.html">Produits</a>
+    <a href="pages/panier.html">Panier \faShoppingCart{}</a>
+    <a href="pages/inscription.html">Inscription</a>
+    <a href="pages/plan.html">Plan du site</a>
+</nav>
+\end{lstlisting}
+
+\subsubsection{pages/inscription.html}
+
+\textbf{Objectif :} Cette page permet aux visiteurs de créer un compte client en fournissant leurs informations personnelles.
+
+\begin{itemize}
+\item \texttt{[TITRE DE LA PAGE]} : "Boutique SNT - Inscription" \newline \textit{Objectif : Indiquer clairement la fonction de la page dans l'onglet}
+\item \texttt{[TITRE PRINCIPAL]} : "🛒 Boutique SNT" \newline \textit{Objectif : Maintenir la cohérence de la marque sur toutes les pages}
+\item \texttt{[TITRE PRINCIPAL DE LA PAGE]} : "Inscription" \newline \textit{Objectif : Annoncer clairement l'action disponible sur cette page}
+\item \texttt{[LABEL PRENOM]} : "Prénom :" \newline \textit{Objectif : Guider l'utilisateur pour saisir son prénom}
+\item \texttt{[LABEL NOM]} : "Nom :" \newline \textit{Objectif : Demander le nom de famille de l'utilisateur}
+\item \texttt{[LABEL EMAIL]} : "Email :" \newline \textit{Objectif : Collecter l'adresse email pour les communications}
+\item \texttt{[LABEL VILLE]} : "Ville :" \newline \textit{Objectif : Connaître la localisation géographique du client}
+\item \texttt{[LABEL AGE]} : "Âge :" \newline \textit{Objectif : Vérifier l'éligibilité selon les critères d'âge}
+\item \texttt{[TEXTE BOUTON]} : "S'inscrire" \newline \textit{Objectif : Valider et soumettre le formulaire d'inscription}
+\item \texttt{[TITRE LISTE INSCRITS]} : "Liste des inscrits" \newline \textit{Objectif : Présenter les clients déjà enregistrés}
+\item \texttt{[TITRE SECTION HISTORIQUE]} : "🕒 Vous avez récemment consulté" \newline \textit{Objectif : Montrer l'historique de navigation personnel}
+\item \texttt{[TEXTE INFO COOKIES]} : "Ces produits sont mémorisés dans un cookie sur votre navigateur" \newline \textit{Objectif : Expliquer la persistance des données}
+\item \texttt{[TEXTE BOUTON COOKIES]} : "Voir mes cookies 🍪" \newline \textit{Objectif : Permettre l'inspection des données stockées}
+\item \texttt{[TEXTE BOUTON EFFACER]} : "Effacer l'historique" \newline \textit{Objectif : Respecter la confidentialité des données}
+\item \texttt{[TEXTE DU FOOTER]} : "© 2025 Boutique SNT - Projet pédagogique" \newline \textit{Objectif : Affirmer les droits et la nature éducative}
+\end{itemize}
+
+Ajoutez le même menu de navigation qu'à l'accueil, en ajustant les chemins relatifs si nécessaire.
+
+\subsubsection{pages/panier.html}
+
+\textbf{Objectif :} Cette page affiche le contenu actuel du panier d'achat et permet de gérer les articles sélectionnés.
+
+\begin{itemize}
+\item \texttt{[TITRE DE LA PAGE]} : "Boutique SNT - Panier" \newline \textit{Objectif : Indiquer la fonction de gestion du panier}
+\item \texttt{[TITRE PRINCIPAL]} : "🛒 Boutique SNT" \newline \textit{Objectif : Maintenir l'identité visuelle de la boutique}
+\item \texttt{[TITRE PRINCIPAL DE LA PAGE]} : "Mon Panier" \newline \textit{Objectif : Personnaliser l'expérience utilisateur}
+\item \texttt{[TEXTE TOTAL]} : "Total :" \newline \textit{Objectif : Présenter le montant total de la commande}
+\item \texttt{[TEXTE BOUTON VIDER]} : "Vider le panier" \newline \textit{Objectif : Permettre de supprimer tous les articles}
+\item \texttt{[TEXTE BOUTON VALIDER]} : "Valider la commande" \newline \textit{Objectif : Finaliser le processus d'achat}
+\item \texttt{[TITRE SECTION HISTORIQUE]} : "🕒 Vous avez récemment consulté" \newline \textit{Objectif : Rappeler les produits vus récemment}
+\item \texttt{[TEXTE INFO COOKIES]} : "Ces produits sont mémorisés dans un cookie sur votre navigateur" \newline \textit{Objectif : Expliquer le mécanisme de stockage}
+\item \texttt{[TEXTE BOUTON COOKIES]} : "Voir mes cookies 🍪" \newline \textit{Objectif : Offrir la transparence sur les données}
+\item \texttt{[TEXTE BOUTON EFFACER]} : "Effacer l'historique" \newline \textit{Objectif : Respecter les droits de suppression des données}
+\item \texttt{[TEXTE DU FOOTER]} : "© 2025 Boutique SNT - Projet pédagogique" \newline \textit{Objectif : Conserver la signature du projet}
+\end{itemize}
+
+Ajoutez le menu de navigation.
+
+\subsubsection{pages/plan.html}
+
+\textbf{Objectif :} Cette page présente la structure complète du site web et explique ses fonctionnalités pédagogiques.
+
+\begin{itemize}
+\item \texttt{[TITRE DE LA PAGE]} : "Boutique SNT - Plan du site" \newline \textit{Objectif : Définir le rôle de navigation de cette page}
+\item \texttt{[TITRE PRINCIPAL]} : "🛒 Boutique SNT" \newline \textit{Objectif : Assurer la cohérence de l'en-tête}
+\item \texttt{[TITRE PRINCIPAL DE LA PAGE]} : "Plan du Site" \newline \textit{Objectif : Annoncer clairement le contenu informatif}
+\item \texttt{[TITRE SECTION 1]} : "\faMobile{} Pages principales" \newline \textit{Objectif : Organiser la présentation des pages du site}
+\item \texttt{[LIEN ACCUEIL]} : "\faHome{} Accueil - Page de bienvenue" \newline \textit{Objectif : Décrire la fonction de la page d'accueil}
+\item \texttt{[LIEN PRODUITS]} : "\faArchive{} Produits - Catalogue des produits disponibles" \newline \textit{Objectif : Présenter le catalogue comme source d'information}
+\item \texttt{[LIEN PANIER]} : "\faShoppingCart{} Panier - Vos articles sélectionnés" \newline \textit{Objectif : Expliquer l'utilité du panier d'achat}
+\item \texttt{[LIEN INSCRIPTION]} : "\faPencil{} Inscription - Créer un compte client" \newline \textit{Objectif : Décrire le processus de création de compte}
+\item \texttt{[LIEN PLAN]} : "\faMap{} Plan du site - Cette page" \newline \textit{Objectif : S'auto-référencer pour la clarté}
+\item \texttt{[TITRE SECTION 2]} : "\faInfo{} Informations" \newline \textit{Objectif : Introduire les informations pédagogiques}
+\item \texttt{[PARAGRAPHE 1]} : "Ce site est un projet pédagogique réalisé dans le cadre du cours de Sciences Numériques et Technologiques." \newline \textit{Objectif : Situer le contexte éducatif du projet}
+\item \texttt{[PARAGRAPHE 2]} : "Il permet d'apprendre les bases du développement web (HTML, CSS, JavaScript) et de la programmation backend (Python)." \newline \textit{Objectif : Lister les technologies abordées}
+\item \texttt{[TITRE SECTION 3]} : "\faBullseye{} Fonctionnalités" \newline \textit{Objectif : Présenter les capacités techniques du site}
+\item \texttt{[FONCTIONNALITE 1]} : "Affichage dynamique des produits depuis un fichier YAML" \newline \textit{Objectif : Montrer l'utilisation de données externes}
+\item \texttt{[FONCTIONNALITE 2]} : "Ajout d'articles au panier" \newline \textit{Objectif : Décrire l'interaction utilisateur de base}
+\item \texttt{[FONCTIONNALITE 3]} : "Gestion du panier (ajout, suppression, calcul du total)" \newline \textit{Objectif : Expliquer la logique métier}
+\item \texttt{[FONCTIONNALITE 4]} : "Inscription de nouveaux clients" \newline \textit{Objectif : Présenter la gestion des utilisateurs}
+\item \texttt{[FONCTIONNALITE 5]} : "Stockage des données clients dans un fichier YAML" \newline \textit{Objectif : Montrer la persistance des données}
+\item \texttt{[TITRE SECTION HISTORIQUE]} : "🕒 Vous avez récemment consulté" \newline \textit{Objectif : Maintenir la cohérence avec les autres pages}
+\item \texttt{[TEXTE INFO COOKIES]} : "Ces produits sont mémorisés dans un cookie sur votre navigateur" \newline \textit{Objectif : Expliquer le mécanisme technique}
+\item \texttt{[TEXTE BOUTON COOKIES]} : "Voir mes cookies 🍪" \newline \textit{Objectif : Permettre l'inspection des données}
+\item \texttt{[TEXTE BOUTON EFFACER]} : "Effacer l'historique" \newline \textit{Objectif : Respecter la protection des données}
+\item \texttt{[TEXTE DU FOOTER]} : "© 2025 Boutique SNT - Projet pédagogique" \newline \textit{Objectif : Affirmer l'origine éducative}
+\end{itemize}
+
+Ajoutez le menu de navigation.
+
+\subsection{pages/produit\_detail.html}
+
+\begin{itemize}
+\item \texttt{[TITRE DE LA PAGE]} : "Boutique SNT - Détail du produit"
+\item \texttt{[TITRE PRINCIPAL]} : "🛒 Boutique SNT"
+\item \texttt{[TEXTE CHARGEMENT]} : "Chargement..."
+\item \texttt{[TITRE SECTION HISTORIQUE]} : "🕒 Vous avez récemment consulté"
+\item \texttt{[TEXTE INFO COOKIES]} : "Ces produits sont mémorisés dans un cookie sur votre navigateur"
+\item \texttt{[TEXTE BOUTON COOKIES]} : "Voir mes cookies 🍪"
+\item \texttt{[TEXTE BOUTON EFFACER]} : "Effacer l'historique"
+\item \texttt{[TEXTE DU FOOTER]} : "© 2025 Boutique SNT - Projet pédagogique"
+\end{itemize}
+
+Ajoutez le menu de navigation.
+
+\subsection{pages/produits.html}
+
+\begin{itemize}
+\item \texttt{[TITRE DE LA PAGE]} : "Boutique SNT - Produits"
+\item \texttt{[TITRE PRINCIPAL]} : "🛒 Boutique SNT"
+\item \texttt{[TITRE PRINCIPAL DE LA PAGE]} : "Nos Produits"
+\item \texttt{[TITRE SECTION HISTORIQUE]} : "🕒 Vous avez récemment consulté"
+\item \texttt{[TEXTE INFO COOKIES]} : "Ces produits sont mémorisés dans un cookie sur votre navigateur"
+\item \texttt{[TEXTE BOUTON COOKIES]} : "Voir mes cookies 🍪"
+\item \texttt{[TEXTE BOUTON EFFACER]} : "Effacer l'historique"
+\item \texttt{[TEXTE DU FOOTER]} : "© 2025 Boutique SNT - Projet pédagogique"
+\end{itemize}
+
+Ajoutez le menu de navigation.
+
+\subsection{pages/recherche.html}
+
+\begin{itemize}
+\item \texttt{[TITRE DE LA PAGE]} : "Boutique SNT - Résultats de recherche"
+\item \texttt{[TITRE PRINCIPAL]} : "🛒 Boutique SNT"
+\item \texttt{[TITRE PRINCIPAL DE LA PAGE]} : "Résultats de recherche"
+\item \texttt{[TITRE SECTION HISTORIQUE]} : "🕒 Vous avez récemment consulté"
+\item \texttt{[TEXTE INFO COOKIES]} : "Ces produits sont mémorisés dans un cookie sur votre navigateur"
+\item \texttt{[TEXTE BOUTON COOKIES]} : "Voir mes cookies 🍪"
+\item \texttt{[TEXTE BOUTON EFFACER]} : "Effacer l'historique"
+\item \texttt{[TEXTE DU FOOTER]} : "© 2025 Boutique SNT - Projet pédagogique"
+\end{itemize}
+
+Ajoutez le menu de navigation.
+
+\end{document}

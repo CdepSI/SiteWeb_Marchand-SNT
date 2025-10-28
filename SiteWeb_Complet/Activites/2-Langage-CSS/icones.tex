@@ -1,0 +1,209 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{fontawesome5}
+\setsansfont{Noto Sans}[Scale=MatchLowercase]
+
+\geometry{margin=2cm}
+
+\lstset{
+    language=HTML,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true
+}
+
+\title{Guide des icônes FontAwesome}
+\author{Pour l'activité CSS}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Les icônes utilisées dans le site marchand sont issues de la bibliothèque FontAwesome. Cette bibliothèque fournit des milliers d'icônes vectorielles qui peuvent être intégrées facilement dans vos pages HTML.
+
+\section{Installation de FontAwesome}
+
+Pour utiliser FontAwesome dans votre projet, vous devez inclure le fichier CSS de FontAwesome dans votre page HTML :
+
+\begin{lstlisting}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+\end{lstlisting}
+
+\section{Utilisation des icônes}
+
+\subsection{Syntaxe de base}
+
+Les icônes FontAwesome s'utilisent avec des classes CSS spécifiques :
+
+\begin{lstlisting}
+<i class="fas fa-shopping-cart"></i>  <!-- Icône panier plein -->
+<i class="far fa-shopping-cart"></i>  <!-- Icône panier vide -->
+<i class="fa fa-cookie"></i>           <!-- Icône cookie -->
+\end{lstlisting}
+
+\subsection{Structure des classes}
+
+\begin{itemize}
+\item \texttt{fas} : FontAwesome Solid (icônes pleines)
+\item \texttt{far} : FontAwesome Regular (icônes vides)
+\item \texttt{fab} : FontAwesome Brands (marques/logos)
+\item \texttt{fa-} suivi du nom de l'icône
+\end{itemize}
+
+\section{Icônes utilisées dans le projet}
+
+Voici les principales icônes utilisées dans le site marchand :
+
+\subsection{Icônes de navigation et commerce}
+
+\begin{itemize}
+\item \faShoppingCart{} \texttt{<i class="fas fa-shopping-cart"></i>} : Panier d'achats
+\item \faHome{} \texttt{<i class="fas fa-home"></i>} : Page d'accueil
+\item \faArchive{} \texttt{<i class="fas fa-archive"></i>} : Produits/Archive
+\item \faPencil{} \texttt{<i class="fas fa-pencil"></i>} : Inscription/Édition
+\item \faMap{} \texttt{<i class="fas fa-map"></i>} : Plan du site
+\end{itemize}
+
+\subsection{Icônes d'information}
+
+\begin{itemize}
+\item \faInfo{} \texttt{<i class="fas fa-info"></i>} : Informations
+\item \faClockO{} \texttt{<i class="far fa-clock"></i>} : Horloge/Temps
+\item \faCookie{} \texttt{<i class="fas fa-cookie"></i>} : Cookies
+\end{itemize}
+
+\subsection{Icônes de recherche}
+
+\begin{itemize}
+\item \faSearch{} \texttt{<i class="fas fa-search"></i>} : Recherche
+\end{itemize}
+
+\subsection{Icônes mobiles}
+
+\begin{itemize}
+\item \faMobile{} \texttt{<i class="fas fa-mobile"></i>} : Téléphone mobile
+\end{itemize}
+
+\section{Exemples d'utilisation dans le HTML}
+
+\subsection{Dans le titre principal}
+
+\begin{lstlisting}
+<h1><i class="fas fa-shopping-cart"></i> Boutique SNT</h1>
+\end{lstlisting}
+
+\subsection{Dans les liens de navigation}
+
+\begin{lstlisting}
+<nav>
+    <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+    <a href="pages/produits.html"><i class="fas fa-archive"></i> Produits</a>
+    <a href="pages/panier.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+</nav>
+\end{lstlisting}
+
+\subsection{Dans les boutons}
+
+\begin{lstlisting}
+<button>
+    <i class="fas fa-cookie"></i> Voir mes cookies
+</button>
+\end{lstlisting}
+
+\subsection{Dans les titres de section}
+
+\begin{lstlisting}
+<h2><i class="far fa-clock"></i> Vous avez récemment consulté</h2>
+\end{lstlisting}
+
+\section{Styles CSS pour les icônes}
+
+Vous pouvez styliser les icônes avec du CSS :
+
+\begin{lstlisting}
+.fa-shopping-cart {
+    color: #1abc9c;        /* Couleur personnalisée */
+    font-size: 1.2em;      /* Taille plus grande */
+    margin-right: 5px;    /* Espace à droite */
+}
+
+.fa-cookie:hover {
+    color: #e74c3c;        /* Changement de couleur au survol */
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+\end{lstlisting}
+
+\section{Trouver d'autres icônes}
+
+Pour découvrir toutes les icônes disponibles :
+
+\begin{enumerate}
+\item Rendez-vous sur le site officiel : \url{https://fontawesome.com/icons}
+\item Utilisez la barre de recherche pour trouver l'icône souhaitée
+\item Copiez le nom de la classe (ex: \texttt{fa-shopping-cart})
+\item Choisissez le style approprié (solid, regular, brands)
+\end{enumerate}
+
+\section{Conseils pratiques}
+
+\begin{itemize}
+\item Les icônes s'adaptent automatiquement à la taille du texte parent
+\item Vous pouvez changer leur couleur avec la propriété CSS \texttt{color}
+\item Utilisez \texttt{font-size} pour changer leur taille
+\item Les icônes sont vectorielles : elles restent nettes à toutes les tailles
+\item Pensez à l'accessibilité : ajoutez un attribut \texttt{aria-label} si nécessaire
+\end{itemize}
+
+\section{Exemple complet}
+
+Voici un exemple complet d'utilisation des icônes dans une page :
+
+\begin{lstlisting}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-shopping-cart"></i> Ma Boutique</h1>
+        <nav>
+            <a href="#"><i class="fas fa-home"></i> Accueil</a>
+            <a href="#"><i class="fas fa-archive"></i> Produits</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Panier</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2><i class="far fa-clock"></i> Produits récents</h2>
+            <button><i class="fas fa-cookie"></i> Voir cookies</button>
+        </section>
+    </main>
+</body>
+</html>
+\end{lstlisting}
+
+Bonne chance avec votre projet !
+
+\end{document}

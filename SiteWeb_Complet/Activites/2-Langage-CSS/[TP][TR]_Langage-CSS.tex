@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E.Bigeard - emmanuel.bigeard@upsti.fr
+% http://s2i.bigeard.me
+% CC BY-NC-SA 2.0 FR - http://creativecommons.org/licenses/by-nc-sa/2.0/fr/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package UPSTI_Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{UPSTI_Document}
+
+%---------------------------------%
+% Paramètres du package
+%---------------------------------%
+
+% Version du document (pour la compilation)
+% 1: Document prof
+% 2: Document élève
+% 3: Document à publier
+\newcommand{\UPSTIidVersionDocument}{3}
+
+% Affichage personnalisé de la classe
+\newcommand{\UPSTIclasse}{SNT}
+
+% Type de document
+% 0: Custom*				7: Fiche Méthode			14: Document Réponses
+% 1: Cours (par défaut)		8: Fiche Synthèse    		15: Programme de colle 
+% 2: TD     				9: Formulaire
+% 3: TP						10: Memo
+% 4: Colle					11: Dossier Technique
+% 5: DS						12: Dossier Ressource
+% 6: DM						13: Concours Blanc
+% * Si on met la valeur 0, il faut décommenter la ligne suivante: 		
+%\newcommand{\UPSTItypeDocument}{Custom}
+\newcommand{\UPSTIidTypeDocument}{3}
+
+% Titre dans l'en-tête
+\newcommand{\UPSTItitreEnTete}{LE LANGAGE CSS}      
+\newcommand{\UPSTItitreEnTetePages}{Site web marchand}      
+\newcommand{\UPSTIsousTitreEnTete}{Site web marchand}      
+
+% Version du document
+\newcommand{\UPSTInumeroVersion}{1.0}
+%v1.1 - Ajout de la chaîne fonctionnelle
+
+%----------------------------------------------- 
+\UPSTIcompileVars		% "Compile" les variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Début du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{document}
+\UPSTIbuildPage
+
+\UPSTIobjectif{Sur cette deuxième activité vous allez modifier le code CSS du site, chaque élève sera responsable d'une page contenant plusieurs feuille de style. 
+}
+
+\competencetable{Compétences à valider}{
+\competence{Etudier et modifier une page HTML simple}
+}
+
+\section*{CHOISIR LES COULEURS}
+
+\activiteressources
+{Définir une palette de couleurs pour l'ensemble du site}
+{
+\task Choisir une palette de couleur pour le site ;
+\task Relever le code HTML des différentes couleurs à appliquer au site web ;
+\task Télécharger le dossier "styles" et le dézipper dans votre espace réseau avec le dossier de l'activité précédente.
+}
+{documentation}
+{\url{https://htmlcolorcodes.com/fr/noms-de-couleur/}}
+
+
+\section*{AJOUTER LES LIENS CSS}
+
+\activiteressources
+{Ajouter dans le code HTML de votre page, les différents liens vers les fichiers CSS.}
+{
+\task Rechercher pour ma page les fichiers CSS correspondant ;
+\task Ajouter les liens vers les fichiers CSS dans le code HTML ;
+}
+{documentation}
+{NotePad ++}
+
+\section*{MODIFIER LE STYLE DU SITE}
+
+\activiteressources
+{Mettre en place le style de votre page web.}
+{%
+\task Modifier les couleurs pour qu'elles correspondent à la palette de couleur choisie ;
+\task Adapter si besoin la position des éléments et des boutons.
+}
+{documentation}
+{NotePad ++}
+
+\section*{TESTER LE STYLE COMPLET}
+
+\activiteressources
+{Tester le style du site}
+{
+\task Sur un PC du groupe, copier les différentes pages modifiées et les feuilles de styles CSS ;
+\task Visualiser le style de votre site
+}
+{documentation}
+{NotePad ++}
+
+
+
+\end{document}
