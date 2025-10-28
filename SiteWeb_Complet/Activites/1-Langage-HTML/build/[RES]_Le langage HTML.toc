@@ -1,0 +1,28 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Les balises HTML de base}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}La balise \texttt {<!DOCTYPE html>}}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}La balise \texttt {<html>}}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}La balise \texttt {<head>}}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}La balise \texttt {<body>}}{3}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Conseils pour bien débuter}{3}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Structure générale du site}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Arborescence du site}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Éléments communs à toutes les pages}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Barre de recherche}{4}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Section des produits récemment consultés}{4}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Menu de navigation}{4}{subsubsection.3.2.3}%
+\contentsline {section}{\numberline {4}Rôle des différentes pages}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Page d'accueil (index.html)}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Page d'inscription (pages/inscription.html)}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Page panier (pages/panier.html)}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Page plan du site (pages/plan.html)}{6}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Ajouter des images à vos pages}{6}{section.5}%
+\contentsline {section}{\numberline {6}Instructions pour modifier les pages}{7}{section.6}%
+\contentsline {subsubsection}{\numberline {6.0.1}index.html}{7}{subsubsection.6.0.1}%
+\contentsline {subsubsection}{\numberline {6.0.2}pages/inscription.html}{8}{subsubsection.6.0.2}%
+\contentsline {subsubsection}{\numberline {6.0.3}pages/panier.html}{9}{subsubsection.6.0.3}%
+\contentsline {subsubsection}{\numberline {6.0.4}pages/plan.html}{10}{subsubsection.6.0.4}%
+\contentsline {subsection}{\numberline {6.1}pages/produit\_detail.html}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}pages/produits.html}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}pages/recherche.html}{12}{subsection.6.3}%

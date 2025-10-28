@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.27)  27 OCT 2025 16:18
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.27)  28 OCT 2025 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./documentation.tex
-(documentation.tex
+**"./[RES]_Le langage CSS.tex"
+([RES]_Le langage CSS.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -425,10 +425,8 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 (C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
-(c:\Users\cedri\OneDrive - CR HDF\7 - PROJET LATEX\[00]_Cours\Seconde_SNT\S2 - 
-Internet_Web\Site_Web-Marchand\SiteWeb_Complet\Activites\2-Langage-CSS\Build\do
-cumentation.aux)
-\openout1 = `documentation.aux'.
+No file "[RES]_Le langage CSS".aux.
+\openout1 = `"[RES]_Le langage CSS.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
@@ -450,7 +448,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -486,15 +483,11 @@ LaTeX Font Info:    ... okay on input line 40.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 40.
-
-(c:\Users\cedri\OneDrive - CR HDF\7 - PROJET LATEX\[00]_Cours\Seconde_SNT\S2 - 
-Internet_Web\Site_Web-Marchand\SiteWeb_Complet\Activites\2-Langage-CSS\Build\do
-cumentation.out)
-(c:\Users\cedri\OneDrive - CR HDF\7 - PROJET LATEX\[00]_Cours\Seconde_SNT\S2 - 
-Internet_Web\Site_Web-Marchand\SiteWeb_Complet\Activites\2-Langage-CSS\Build\do
-cumentation.out)
 \@outlinefile=\write3
-\openout3 = `documentation.out'.
+\openout3 = `"[RES]_Le langage CSS.out"'.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \c@lstlisting=\count327
 
@@ -559,25 +552,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 43.
+No file "[RES]_Le langage CSS".toc.
+\tf@toc=\write4
+\openout4 = `"[RES]_Le langage CSS.toc"'.
 
-(c:\Users\cedri\OneDrive - CR HDF\7 - PROJET LATEX\[00]_Cours\Seconde_SNT\S2 - 
-Internet_Web\Site_Web-Marchand\SiteWeb_Complet\Activites\2-Langage-CSS\Build\do
-cumentation.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
 
 
 [1
 
-])
-\tf@toc=\write4
-\openout4 = `documentation.toc'.
-
-
+]
 
 [2]
 
@@ -590,27 +573,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [6]
 
 [7]
-
-[8]
 (c:\Users\cedri\OneDrive - CR HDF\7 - PROJET LATEX\[00]_Cours\Seconde_SNT\S2 - 
-Internet_Web\Site_Web-Marchand\SiteWeb_Complet\Activites\2-Langage-CSS\Build\do
-cumentation.aux)
+Internet_Web\Site_Web-Marchand\SiteWeb_Complet\Activites\2-Langage-CSS\build\[R
+ES]_Le langage CSS.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 7BFE1DE0F119EFBD0CEA54A62CDB6702;8264.
+Package rerunfilecheck Info: File `"[RES]_Le langage CSS".out' has not changed.
+
+(rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 14555 strings out of 403248
- 278340 string characters out of 5465185
- 1172730 words of memory out of 5000000
- 42857 multiletter control sequences out of 15000+600000
- 634025 words of font info for 78 fonts, out of 8000000 for 9000
+ 14509 strings out of 403248
+ 277156 string characters out of 5465185
+ 1172748 words of memory out of 5000000
+ 42829 multiletter control sequences out of 15000+600000
+ 631273 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,6n,114p,341b,1765s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,6n,114p,309b,1765s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on c:\Users\cedri\OneDrive - CR HDF\7 - PROJET LATEX\[00]_Cours\
 Seconde_SNT\S2 - Internet_Web\Site_Web-Marchand\SiteWeb_Complet\Activites\2-Lan
-gage-CSS\Build\documentation.pdf (8 pages).
+gage-CSS\build\[RES]_Le langage CSS.pdf (7 pages).
