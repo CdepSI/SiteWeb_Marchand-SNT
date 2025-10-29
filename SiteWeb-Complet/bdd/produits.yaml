@@ -1,5 +1,12 @@
 # Fichier de configuration des produits
-# Les élèves peuvent ajouter de nouveaux produits ici
+# Pour ajouter un nouveau produit, copier le modèle ci-dessous et modifier les valeurs :
+#
+#  - id: "prod007"              # Identifiant unique (ex: prod007, prod008...)
+#    nom: "Nom du produit"      # Nom affiché sur le site
+#    description: "Description" # Courte description du produit
+#    prix: 99.99               # Prix en euros (avec point, pas de virgule)
+#    stock: 10                 # Quantité en stock disponible
+#    image: "image.jpg"         # Nom du fichier image (à placer dans le dossier images/)
 
 produits:
   - id: "prod001"
@@ -44,11 +51,3 @@ produits:
     stock: 30
     image: "webcam.jpg"
 
-# Pour ajouter un nouveau produit, copier le modèle ci-dessous et modifier les valeurs :
-#
-#  - id: "prod007"              # Identifiant unique (ex: prod007, prod008...)
-#    nom: "Nom du produit"      # Nom affiché sur le site
-#    description: "Description" # Courte description du produit
-#    prix: 99.99               # Prix en euros (avec point, pas de virgule)
-#    stock: 10                 # Quantité en stock disponible
-#    image: "image.jpg"         # Nom du fichier image (à placer dans le dossier images/)

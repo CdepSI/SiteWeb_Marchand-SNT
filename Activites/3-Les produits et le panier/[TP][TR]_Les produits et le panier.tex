@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E.Bigeard - emmanuel.bigeard@upsti.fr
+% http://s2i.bigeard.me
+% CC BY-NC-SA 2.0 FR - http://creativecommons.org/licenses/by-nc-sa/2.0/fr/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package UPSTI_Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{UPSTI_Document}
+
+%---------------------------------%
+% Paramètres du package
+%---------------------------------%
+
+% Version du document (pour la compilation)
+% 1: Document prof
+% 2: Document élève
+% 3: Document à publier
+\newcommand{\UPSTIidVersionDocument}{3}
+
+% Affichage personnalisé de la classe
+\newcommand{\UPSTIclasse}{SNT}
+
+% Type de document
+% 0: Custom*				7: Fiche Méthode			14: Document Réponses
+% 1: Cours (par défaut)		8: Fiche Synthèse    		15: Programme de colle 
+% 2: TD     				9: Formulaire
+% 3: TP						10: Memo
+% 4: Colle					11: Dossier Technique
+% 5: DS						12: Dossier Ressource
+% 6: DM						13: Concours Blanc
+% * Si on met la valeur 0, il faut décommenter la ligne suivante: 		
+%\newcommand{\UPSTItypeDocument}{Custom}
+\newcommand{\UPSTIidTypeDocument}{3}
+
+% Titre dans l'en-tête
+\newcommand{\UPSTItitreEnTete}{LES PRODUITS ET LE PANIER}      
+\newcommand{\UPSTItitreEnTetePages}{Site web marchand}      
+\newcommand{\UPSTIsousTitreEnTete}{Site web marchand}      
+
+% Version du document
+\newcommand{\UPSTInumeroVersion}{1.0}
+%v1.1 - Ajout de la chaîne fonctionnelle
+
+%----------------------------------------------- 
+\UPSTIcompileVars		% "Compile" les variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Début du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{document}
+\UPSTIbuildPage
+
+\UPSTIobjectif{Sur cette activité vous allez devoir réaliser différentes actions afin de faire fonctionner le coeur de votre site web marchand, c'est à dire la liste de vos produits 
+et le panier d'achat. Le travail à réaliser se répartie en 3 rôles détaillé ci-dessous.
+}
+
+\competencetable{Compétences à valider}{
+\competence{Savoir organiser les fichiers et les dossiers dans l'espace réseau personnel}
+\competence{Définir une donnée personnelle.}
+}
+
+%Actions pour visualiser les produits et le panier d'achat
+% - Mettre en place le serveur web
+% - Télécharger les fichiers depuis Moodle
+% - Ajouter les scripts nécessaires au fonctionnement du panier et à l'affichage des produits
+% - Ajouter les images des produits
+% - Compléter le fichier produit yaml
+
+\section*{Rôle 1 - 2 Elèves : Mise en place du serveur web}
+
+\activiteressources
+{Mettre en place sur la page produit.}
+{
+\task Démarrer le raspberry PI et copier les fichiers du site web disponible sur Moodle ;
+\task Ajouter au page "produits.html" et produit_detail.html" les scripts nécessaires au fonctionnement du panier et à l'affichage des produits ;
+\task Lancer le serveur web à l'aide du programme Python ;
+\task Tester le site Web ;
+\task Attribuer dans le serveur DNS l'adresse web pour votre site marchand ;
+\task Créer un point d'accès wifi ;
+\task Tester l'accès au site web marchand avec votre smartphone.
+}
+{[RES]_Mettre en place un serveur web}
+{Moodle}
+
+\section*{Rôle 2 : 2 Elèves : Gestion des produits}
+
+\activiteressources
+{Compléter le fichier produits.yaml afin d'y ajouter vos propre produit.}
+{
+\task Ajouter les produits en respectant la structure du fichier YAML ;
+\task Rechercher des images libres de droits pour illustrer vos produits ;
+\task Ajouter les images dans le dossier "images" du site web ;
+\task Donner aux élèves responsable du serveur web le fichier YAML et testez votre site marchand.
+}
+{[RES]_Gestion_des_produits}
+{Moodle}
+
+\end{document}
