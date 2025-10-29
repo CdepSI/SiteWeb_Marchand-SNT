@@ -1,0 +1,53 @@
+# Fichier de configuration des produits
+# Pour ajouter un nouveau produit, copier le modèle ci-dessous et modifier les valeurs :
+#
+#  - id: "prod007"              # Identifiant unique (ex: prod007, prod008...)
+#    nom: "Nom du produit"      # Nom affiché sur le site
+#    description: "Description" # Courte description du produit
+#    prix: 99.99               # Prix en euros (avec point, pas de virgule)
+#    stock: 10                 # Quantité en stock disponible
+#    image: "image.jpg"         # Nom du fichier image (à placer dans le dossier images/)
+
+produits:
+  - id: "prod001"
+    nom: "Ordinateur portable"
+    description: "PC portable performant pour le travail et les loisirs"
+    prix: 699.99
+    stock: 15
+    image: "ordinateur.jpg"
+
+  - id: "prod002"
+    nom: "Souris sans fil"
+    description: "Souris ergonomique avec connexion Bluetooth"
+    prix: 29.99
+    stock: 45
+    image: "souris.jpg"
+
+  - id: "prod003"
+    nom: "Clavier mécanique"
+    description: "Clavier gaming avec rétroéclairage RGB"
+    prix: 89.99
+    stock: 23
+    image: "clavier.jpg"
+
+  - id: "prod004"
+    nom: "Écran 24 pouces"
+    description: "Moniteur Full HD avec dalle IPS"
+    prix: 159.99
+    stock: 8
+    image: "ecran.jpg"
+
+  - id: "prod005"
+    nom: "Casque audio"
+    description: "Casque sans fil avec réduction de bruit"
+    prix: 149.99
+    stock: 12
+    image: "casque.jpg"
+
+  - id: "prod006"
+    nom: "Webcam HD"
+    description: "Webcam 1080p pour visioconférence"
+    prix: 49.99
+    stock: 30
+    image: "webcam.jpg"
+
