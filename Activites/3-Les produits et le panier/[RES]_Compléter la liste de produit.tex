@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E.Bigeard - emmanuel.bigeard@upsti.fr
+% http://s2i.bigeard.me
+% CC BY-NC-SA 2.0 FR - http://creativecommons.org/licenses/by-nc-sa/2.0/fr/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package UPSTI_Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{UPSTI_Document}
+
+%---------------------------------%
+% Paramètres du package
+%---------------------------------%
+
+% Version du document (pour la compilation)
+% 1: Document prof
+% 2: Document élève
+% 3: Document à publier
+\newcommand{\UPSTIidVersionDocument}{3}
+
+% Affichage personnalisé de la classe
+\newcommand{\UPSTIclasse}{SNT}
+
+% Type de document
+% 0: Custom*				7: Fiche Méthode			14: Document Réponses
+% 1: Cours (par défaut)		8: Fiche Synthèse    		15: Programme de colle
+% 2: TD     				9: Formulaire
+% 3: TP						10: Memo
+% 4: Colle					11: Dossier Technique
+% 5: DS						12: Dossier Ressource
+% 6: DM						13: Concours Blanc
+% * Si on met la valeur 0, il faut décommenter la ligne suivante:
+%\newcommand{\UPSTItypeDocument}{Custom}
+\newcommand{\UPSTIidTypeDocument}{12}
+
+% Titre dans l'en-tête
+\newcommand{\UPSTItitreEnTete}{DOCUMENTATION COMPLETION YAML}
+\newcommand{\UPSTItitreEnTetePages}{Site web marchand}
+\newcommand{\UPSTIsousTitreEnTete}{Site web marchand}
+
+% Version du document
+\newcommand{\UPSTInumeroVersion}{1.0}
+
+%-----------------------------------------------
+\UPSTIcompileVars		% "Compile" les variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Début du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\UPSTIbuildPage
+
+\UPSTIobjectif{Cette documentation explique aux élèves comment compléter le fichier \texttt{produits.yaml} en ajoutant de nouveaux produits pour le site web marchand.
+}
+
+\section*{Introduction}
+
+Le fichier \texttt{produits.yaml} est un fichier de configuration au format YAML qui contient la liste des produits disponibles sur le site web marchand. Chaque produit est défini par plusieurs propriétés qui permettent de l'afficher et de le gérer sur le site.
+
+\section*{Structure du fichier}
+
+Le fichier \texttt{produits.yaml} est organisé de la manière suivante :
+
+\begin{itemize}
+\item Il commence par des commentaires (lignes commençant par \#) qui expliquent comment ajouter un nouveau produit.
+\item La clé principale est \texttt{produits}, qui contient une liste de produits.
+\item Chaque produit est représenté par un élément de la liste avec les propriétés suivantes :
+  \begin{itemize}
+  \item \texttt{id} : Identifiant unique du produit (exemple : "prod007"). Il doit être unique pour chaque produit.
+  \item \texttt{nom} : Nom du produit tel qu'il sera affiché sur le site.
+  \item \texttt{description} : Courte description du produit.
+  \item \texttt{prix} : Prix du produit en euros. Utilisez un point (.) pour les décimales, pas de virgule (,).
+  \item \texttt{stock} : Quantité disponible en stock (nombre entier).
+  \item \texttt{image} : Nom du fichier image associé au produit (exemple : "monproduit.jpg"). L'image doit être placée dans le dossier \texttt{images/} du site web.
+  \end{itemize}
+\end{itemize}
+
+\section*{Comment ajouter un nouveau produit}
+
+Pour ajouter un nouveau produit au fichier \texttt{produits.yaml}, suivez ces étapes :
+
+\begin{enumerate}
+\item Ouvrez le fichier \texttt{produits.yaml} avec un éditeur de texte (comme Notepad++ ou VS Code).
+\item Copiez le modèle commenté en haut du fichier (les lignes commençant par \# qui montrent un exemple de produit).
+\item Collez ce modèle à la fin de la liste des produits existants, après le dernier produit.
+\item Modifiez les valeurs selon votre nouveau produit :
+  \begin{itemize}
+  \item Changez l'\texttt{id} pour un identifiant unique (incrémentez le numéro, par exemple prod007, prod008, etc.).
+  \item Remplacez "Nom du produit" par le nom réel.
+  \item Ajoutez une description appropriée.
+  \item Indiquez le prix correct (avec un point pour les décimales).
+  \item Spécifiez la quantité en stock.
+  \item Indiquez le nom du fichier image (sans le chemin, juste le nom du fichier).
+  \end{itemize}
+\item Enregistrez le fichier.
+\item Ajoutez l'image correspondante dans le dossier \texttt{images/} du site web. Assurez-vous que le nom du fichier correspond exactement à ce qui est indiqué dans la propriété \texttt{image}.
+\end{enumerate}
+
+\section*{Exemple d'ajout d'un produit}
+
+Voici un exemple de produit ajouté à la fin du fichier :
+
+\begin{verbatim}
+  - id: "prod007"
+    nom: "Tablette graphique"
+    description: "Tablette pour dessiner avec stylet inclus"
+    prix: 79.99
+    stock: 20
+    image: "tablette.jpg"
+\end{verbatim}
+
+Assurez-vous que l'indentation (les espaces au début des lignes) est respectée : chaque propriété doit être indentée de 4 espaces par rapport au tiret (-).
+
+\section*{Règles importantes}
+
+\begin{itemize}
+\item L'identifiant (\texttt{id}) doit être unique pour chaque produit. Si deux produits ont le même id, cela peut causer des problèmes sur le site.
+\item Le prix doit utiliser un point (.) pour séparer les euros des centimes, pas une virgule (,).
+\item Les images doivent être au format JPG, PNG ou GIF et placées dans le dossier \texttt{images/}.
+\item Les noms de fichiers d'images ne doivent pas contenir d'espaces ou de caractères spéciaux ; utilisez des underscores (\_) ou des tirets (-) si nécessaire.
+\item Après avoir modifié le fichier, testez le site web pour vérifier que les nouveaux produits s'affichent correctement.
+\end{itemize}
+
+\end{document}
