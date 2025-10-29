@@ -1,67 +1,45 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% E.Bigeard - emmanuel.bigeard@upsti.fr
-% http://s2i.bigeard.me
-% CC BY-NC-SA 2.0 FR - http://creativecommons.org/licenses/by-nc-sa/2.0/fr/
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Package UPSTI_Document
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{UPSTI_Document}
-
-%---------------------------------%
-% Paramètres du package
-%---------------------------------%
-
-% Version du document (pour la compilation)
-% 1: Document prof
-% 2: Document élève
-% 3: Document à publier
-\newcommand{\UPSTIidVersionDocument}{3}
-
-% Affichage personnalisé de la classe
-\newcommand{\UPSTIclasse}{SNT}
-
-% Type de document
-% 0: Custom*				7: Fiche Méthode			14: Document Réponses
-% 1: Cours (par défaut)		8: Fiche Synthèse    		15: Programme de colle
-% 2: TD     				9: Formulaire
-% 3: TP						10: Memo
-% 4: Colle					11: Dossier Technique
-% 5: DS						12: Dossier Ressource
-% 6: DM						13: Concours Blanc
-% * Si on met la valeur 0, il faut décommenter la ligne suivante:
-%\newcommand{\UPSTItypeDocument}{Custom}
-\newcommand{\UPSTIidTypeDocument}{12}
-
-% Titre dans l'en-tête
-\newcommand{\UPSTItitreEnTete}{DOCUMENTATION COMPLETION YAML}
-\newcommand{\UPSTItitreEnTetePages}{Site web marchand}
-\newcommand{\UPSTIsousTitreEnTete}{Site web marchand}
-
-% Version du document
-\newcommand{\UPSTInumeroVersion}{1.0}
-
-%-----------------------------------------------
-\UPSTIcompileVars		% "Compile" les variables
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Début du document
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
-\UPSTIbuildPage
-
-\UPSTIobjectif{Cette documentation explique aux élèves comment compléter le fichier \texttt{produits.yaml} en ajoutant de nouveaux produits pour le site web marchand.
+\lstset{
+    language=,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true
 }
 
-\section*{Introduction}
+\title{Documentation - Compléter la liste de produits}
+\author{Documentation pédagogique}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Objectif}
+
+Cette documentation explique aux élèves comment compléter le fichier \texttt{produits.yaml} en ajoutant de nouveaux produits pour le site web marchand.
+
+\section{Introduction}
 
 Le fichier \texttt{produits.yaml} est un fichier de configuration au format YAML qui contient la liste des produits disponibles sur le site web marchand. Chaque produit est défini par plusieurs propriétés qui permettent de l'afficher et de le gérer sur le site.
 
-\section*{Structure du fichier}
+\section{Structure du fichier}
 
 Le fichier \texttt{produits.yaml} est organisé de la manière suivante :
 
@@ -79,7 +57,7 @@ Le fichier \texttt{produits.yaml} est organisé de la manière suivante :
   \end{itemize}
 \end{itemize}
 
-\section*{Comment ajouter un nouveau produit}
+\section{Comment ajouter un nouveau produit}
 
 Pour ajouter un nouveau produit au fichier \texttt{produits.yaml}, suivez ces étapes :
 
@@ -100,7 +78,7 @@ Pour ajouter un nouveau produit au fichier \texttt{produits.yaml}, suivez ces é
 \item Ajoutez l'image correspondante dans le dossier \texttt{images/} du site web. Assurez-vous que le nom du fichier correspond exactement à ce qui est indiqué dans la propriété \texttt{image}.
 \end{enumerate}
 
-\section*{Exemple d'ajout d'un produit}
+\section{Exemple d'ajout d'un produit}
 
 Voici un exemple de produit ajouté à la fin du fichier :
 
@@ -115,7 +93,7 @@ Voici un exemple de produit ajouté à la fin du fichier :
 
 Assurez-vous que l'indentation (les espaces au début des lignes) est respectée : chaque propriété doit être indentée de 4 espaces par rapport au tiret (-).
 
-\section*{Règles importantes}
+\section{Règles importantes}
 
 \begin{itemize}
 \item L'identifiant (\texttt{id}) doit être unique pour chaque produit. Si deux produits ont le même id, cela peut causer des problèmes sur le site.
