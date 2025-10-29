@@ -1,0 +1,168 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E.Bigeard - emmanuel.bigeard@upsti.fr
+% http://s2i.bigeard.me
+% CC BY-NC-SA 2.0 FR - http://creativecommons.org/licenses/by-nc-sa/2.0/fr/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package UPSTI_Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{UPSTI_Document}
+
+%---------------------------------%
+% Paramètres du package
+%---------------------------------%
+
+% Version du document (pour la compilation)
+% 1: Document prof
+% 2: Document élève
+% 3: Document à publier
+\newcommand{\UPSTIidVersionDocument}{3}
+
+% Affichage personnalisé de la classe
+\newcommand{\UPSTIclasse}{SNT}
+
+% Type de document
+% 0: Custom*				7: Fiche Méthode			14: Document Réponses
+% 1: Cours (par défaut)		8: Fiche Synthèse    		15: Programme de colle
+% 2: TD     				9: Formulaire
+% 3: TP						10: Memo
+% 4: Colle					11: Dossier Technique
+% 5: DS						12: Dossier Ressource
+% 6: DM						13: Concours Blanc
+% * Si on met la valeur 0, il faut décommenter la ligne suivante:
+%\newcommand{\UPSTItypeDocument}{Custom}
+\newcommand{\UPSTIidTypeDocument}{12}
+
+% Titre dans l'en-tête
+\newcommand{\UPSTItitreEnTete}{DOCUMENTATION AJOUT SCRIPTS}
+\newcommand{\UPSTItitreEnTetePages}{Site web marchand}
+\newcommand{\UPSTIsousTitreEnTete}{Site web marchand}
+
+% Version du document
+\newcommand{\UPSTInumeroVersion}{1.0}
+
+%-----------------------------------------------
+\UPSTIcompileVars		% "Compile" les variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Début du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\UPSTIbuildPage
+
+\UPSTIobjectif{Cette documentation explique aux élèves comment ajouter les scripts JavaScript nécessaires au fonctionnement des produits et du panier dans les pages HTML appropriées du site web marchand.
+}
+
+\section*{Introduction}
+
+Le site web marchand utilise des scripts JavaScript pour gérer l'affichage des produits et le panier d'achat. Ces scripts doivent être correctement inclus dans les pages HTML pour que les fonctionnalités fonctionnent. Actuellement, les pages HTML n'ont aucun script inclus.
+
+\section*{Scripts disponibles}
+
+Voici la liste des scripts JavaScript disponibles dans le dossier \texttt{js/} de l'activité 3 :
+
+\begin{itemize}
+\item \texttt{panier.js} : Gestion du panier d'achat
+\item \texttt{produit\_detail.js} : Gestion de l'affichage du détail d'un produit
+\item \texttt{produits.js} : Gestion de l'affichage de la liste des produits
+\end{itemize}
+
+\section*{Comment ajouter les scripts dans les pages HTML}
+
+Pour ajouter un script JavaScript dans une page HTML, vous devez insérer une balise \texttt{<script>} dans la section \texttt{<head>} ou juste avant la fermeture de la balise \texttt{</body>}. La balise doit avoir l'attribut \texttt{src} qui pointe vers le fichier JavaScript.
+
+\subsection*{Syntaxe de base}
+
+\begin{verbatim}
+<script src="js/nom_du_script.js"></script>
+\end{verbatim}
+
+\subsection*{Emplacement des scripts}
+
+Il est recommandé de placer les balises \texttt{<script>} juste avant la fermeture de la balise \texttt{</body>}, après le contenu HTML principal. Cela permet au contenu de se charger avant que les scripts ne s'exécutent.
+
+\section*{Scripts à ajouter dans chaque page}
+
+\subsection*{Page produits.html}
+
+Cette page affiche la liste des produits et permet d'ajouter des produits au panier. Les scripts nécessaires sont :
+
+\begin{itemize}
+\item \texttt{produits.js} : Pour charger et afficher les produits depuis le fichier YAML
+\item \texttt{panier.js} : Pour ajouter des produits au panier
+\end{itemize}
+
+Vous devez ajouter ces scripts dans le fichier \texttt{produits.html} juste avant la fermeture de la balise \texttt{</body>} :
+
+\begin{verbatim}
+<script src="js/produits.js"></script>
+<script src="js/panier.js"></script>
+</body>
+\end{verbatim}
+
+\subsection*{Page produit\_detail.html}
+
+Cette page affiche le détail d'un produit spécifique. Le script nécessaire est :
+
+\begin{itemize}
+\item \texttt{produit\_detail.js} : Pour charger et afficher le détail du produit
+\end{itemize}
+
+Vous devez ajouter ce script dans le fichier \texttt{produit\_detail.html} juste avant la fermeture de la balise \texttt{</body>} :
+
+\begin{verbatim}
+<script src="js/produit_detail.js"></script>
+</body>
+\end{verbatim}
+
+\subsection*{Page panier.html}
+
+Cette page affiche le contenu du panier. Le script nécessaire est :
+
+\begin{itemize}
+\item \texttt{panier.js} : Pour gérer le contenu du panier
+\end{itemize}
+
+Vous devez ajouter ce script dans le fichier \texttt{panier.html} juste avant la fermeture de la balise \texttt{</body>} :
+
+\begin{verbatim}
+<script src="js/panier.js"></script>
+</body>
+\end{verbatim}
+
+\section*{Vérification du bon fonctionnement}
+
+Après avoir ajouté les scripts dans les pages HTML, vous pouvez vérifier que tout fonctionne correctement :
+
+\begin{enumerate}
+\item Ouvrez le site web dans un navigateur
+\item Vérifiez que les produits s'affichent correctement sur la page produits
+\item Cliquez sur un produit pour voir le détail
+\item Ajoutez des produits au panier
+\item Vérifiez le contenu du panier
+\end{enumerate}
+
+\section*{Débogage}
+
+Si une fonctionnalité ne fonctionne pas, vérifiez :
+
+\begin{itemize}
+\item Que le chemin vers le script est correct (\texttt{js/nom\_du\_script.js})
+\item Que le fichier JavaScript existe dans le dossier \texttt{js/}
+\item Que la console du navigateur (F12) n'affiche pas d'erreurs JavaScript
+\item Que le fichier YAML (produits.yaml) est présent et correctement formaté
+\end{itemize}
+
+\section*{Ordre d'inclusion des scripts}
+
+L'ordre d'inclusion des scripts peut être important car certains scripts dépendent d'autres. Pour cette activité, incluez les scripts dans l'ordre suivant :
+
+\begin{enumerate}
+\item Scripts spécifiques à la page (produits.js, produit\_detail.js, panier.js)
+\end{enumerate}
+
+\end{document}
